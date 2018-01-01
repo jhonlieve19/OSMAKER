@@ -6,7 +6,7 @@ $start ="";
 $end ="";
 $endvote = "";
 $today = date("Y-m-d");
-
+//recoded dri nga part
 
 if($_POST)
 {
