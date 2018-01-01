@@ -1,0 +1,45 @@
+#rght{
+            margin-left: 30em;
+
+        }
+        .tb{
+            margin: 7px 2px 0px 5px;
+            border-bottom-color: transparent;
+            border-style:hidden;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        .con{
+            background-color: transparent;
+            height: 640px;
+            width: auto;
+            padding: 0em 10em 0em 10em;
+        }
+        .in-con{
+            background-color: transparent;
+            height: 700px ;
+            width: auto;
+            padding: 1em 2em 1em 2em;
+        }
+        .in-cl{
+            background-color: #f4f5f7;
+            height: 595px;
+            width: 320px;
+            float: left;
+            padding: 1em 1em 1em 1em;
+
+
+        }
+        .in-cr{
+            background-color:#f4f5f7;
+            height: auto;
+            width: 680px;
+            padding: 1em 1em 2em 1em;
+            float: right;
+
+        }
+        #rght{
+            float: right;
+            margin-left: 37em;
+        }
+

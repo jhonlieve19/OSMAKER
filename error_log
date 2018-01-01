@@ -1,0 +1,125 @@
+[04-Mar-2017 12:27:40 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[04-Mar-2017 12:27:44 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[04-Mar-2017 12:28:06 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[04-Mar-2017 17:47:33 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[04-Mar-2017 22:17:56 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[04-Mar-2017 22:20:58 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[04-Mar-2017 23:13:17 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 01:52:17 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 02:39:02 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 02:39:09 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 02:58:12 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 05:48:24 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 05:48:24 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 05:48:27 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 05:49:34 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 05:49:37 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 05:50:52 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 06:11:24 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 06:11:36 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 06:14:00 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 06:19:10 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[05-Mar-2017 09:12:33 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[06-Mar-2017 09:22:29 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[06-Mar-2017 09:37:55 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[06-Mar-2017 09:40:55 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[06-Mar-2017 11:37:53 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[06-Mar-2017 22:39:16 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[07-Mar-2017 05:33:42 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[08-Mar-2017 23:04:45 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[08-Mar-2017 23:31:39 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[08-Mar-2017 23:38:21 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'localhost' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[08-Mar-2017 23:48:39 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:00:47 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:36:34 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstoryjuysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:37:36 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstoryjuysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:38:36 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstoryjuysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:38:50 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:49 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:49 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:49 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:49 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:50 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:50 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:50 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 00:39:50 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 02:34:27 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 02:41:48 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 02:45:56 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 04:35:42 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 04:35:46 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 04:43:36 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 09:05:02 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'ourstory@juysolutions.com'@'just26.justhost.com' (using password: YES) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 23:03:01 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[09-Mar-2017 23:03:01 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[09-Mar-2017 23:03:27 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[09-Mar-2017 23:03:27 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[09-Mar-2017 23:07:48 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 23:08:23 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 23:17:36 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 23:17:37 America/Denver] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home6/jackyuyc/public_html/ourstory/Connection.php on line 7
+[09-Mar-2017 23:24:17 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[09-Mar-2017 23:24:17 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[09-Mar-2017 23:28:30 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[09-Mar-2017 23:28:30 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 05:54:24 America/Denver] PHP Notice:  Undefined index: tbmature in /home6/jackyuyc/public_html/ourstory/Insert_Up.php on line 40
+[10-Mar-2017 06:35:02 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home6/jackyuyc/public_html/ourstory/ViewEntries.php:107) in /home6/jackyuyc/public_html/ourstory/ViewEntries.php on line 172
+[10-Mar-2017 06:35:02 America/Denver] PHP Notice:  Undefined variable: conID in /home6/jackyuyc/public_html/ourstory/ViewEntries.php on line 182
+[10-Mar-2017 07:14:00 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 07:14:00 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 07:14:06 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 07:14:06 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 07:30:27 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:30:27 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 07:45:46 America/Denver] PHP Notice:  Undefined index: tbConID in /home6/jackyuyc/public_html/ourstory/uploadmyStory.php on line 45
+[10-Mar-2017 07:46:32 America/Denver] PHP Notice:  Undefined variable: accno in /home6/jackyuyc/public_html/ourstory/uploadmyStory.php on line 63
+[10-Mar-2017 07:48:58 America/Denver] PHP Notice:  Undefined index: tbmature in /home6/jackyuyc/public_html/ourstory/Insert_Up.php on line 40
+[10-Mar-2017 07:53:19 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:53:19 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 07:53:22 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:53:22 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 07:53:22 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:53:22 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 07:53:22 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:53:22 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 07:53:22 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:53:22 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 07:53:25 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:53:25 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 07:53:37 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 07:53:37 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:09:09 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:09:09 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:13:39 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:13:39 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:21:06 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:21:06 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:23:33 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:23:33 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:31:51 America/Denver] PHP Notice:  Undefined variable: file_ext in /home6/jackyuyc/public_html/ourstory/uploadmyStory.php on line 23
+[10-Mar-2017 08:31:51 America/Denver] PHP Notice:  Undefined variable: extensions in /home6/jackyuyc/public_html/ourstory/uploadmyStory.php on line 23
+[10-Mar-2017 08:31:51 America/Denver] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home6/jackyuyc/public_html/ourstory/uploadmyStory.php on line 23
+[10-Mar-2017 08:31:51 America/Denver] PHP Notice:  Undefined variable: file_size in /home6/jackyuyc/public_html/ourstory/uploadmyStory.php on line 27
+[10-Mar-2017 08:47:15 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:47:15 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:48:19 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:48:19 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:50:17 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:50:17 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 08:52:24 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 08:52:24 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 09:06:57 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 09:06:57 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 09:10:02 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 09:10:02 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 09:19:27 America/Denver] PHP Notice:  Undefined index: tbmature in /home6/jackyuyc/public_html/ourstory/Insert_Up.php on line 40
+[10-Mar-2017 09:23:43 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 09:23:43 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 09:27:28 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 09:27:28 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 09:30:12 America/Denver] PHP Notice:  Undefined variable: usr in /home6/jackyuyc/public_html/ourstory/Form1.php on line 162
+[10-Mar-2017 09:30:12 America/Denver] PHP Fatal error:  Call to undefined function ageCalculator() in /home6/jackyuyc/public_html/ourstory/Form1.php on line 183
+[10-Mar-2017 10:04:11 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 10:04:11 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 10:14:44 America/Denver] PHP Warning:  include(Nav.php): failed to open stream: No such file or directory in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75
+[10-Mar-2017 10:14:44 America/Denver] PHP Warning:  include(): Failed opening 'Nav.php' for inclusion (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home6/jackyuyc/public_html/ourstory/EditAccount.php on line 75

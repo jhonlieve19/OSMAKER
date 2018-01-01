@@ -1,0 +1,105 @@
+ .tb{
+    margin: 7px 2px 0px 5px;
+    border-bottom-color: transparent;
+    border-style:hidden;
+    padding: 3px;
+    border-radius: 5px;
+}
+.con{
+    background-color: #f7f7f7;
+    height: auto;
+    width: auto;
+    padding: 1em;
+}
+.ins{
+    background-color: white;
+    height: auto;
+    width: 247px;
+    margin: 1em;
+    float: left;
+    padding: 1%;
+}
+img{
+    width:200px;
+    height:220px;
+    margin-bottom: 4%;
+
+}
+.right{
+    width: 805px;
+    height: auto;
+    background-color: white;
+    margin: 1em;
+    padding: 0.3% 3% 15% 3%;
+
+}
+.right,.ins{
+    display: inline-block;
+}
+.btns{
+    background-color: coral;
+    border-style:hidden;
+    padding: 5px 7px 5px 7px;
+    color: white;
+    border-radius: 3px;
+    border-color: aquamarine;
+}
+.btns:hover{
+    background-color: skyblue;
+    box-shadow: 0em 0em 3em;
+}
+.btnss{
+    background-color: red;
+    border-style:hidden;
+    padding: 5px 7px 5px 7px;
+    color: white;
+    border-radius: 3px;
+    border-color: aquamarine;
+}
+.btnss:hover{
+    background-color: skyblue;
+    box-shadow: 0em 0em 3em;
+}
+table{
+    border-collapse: collapse;
+    border-color:white;
+}
+textarea {
+    resize: none;
+    border-style: none;
+    min-height: auto;
+    max-height: auto;
+    outline: none;
+}
+.butoy{
+    color: blue;
+}
+.tit{
+    color: cornflowerblue;
+}
+.color{
+    background-color: tan;
+    font-family: century gothic;
+    font-variant: small-caps;
+    color: ghostwhite;
+}
+body{
+    background: gray;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.content{
+    background: #fff;
+    margin: 0 auto;
+    width: 600px;
+    padding: 10px;
+    min-height: 300px;
+}
+
+.read-more-link, .show-less-link{
+    text-decoration: none;
+    font-weight: bolder;
+    color: green;
+}

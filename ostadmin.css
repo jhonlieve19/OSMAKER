@@ -1,0 +1,47 @@
+h1{
+                background-color: forestgreen;
+                color: white;
+                font-family: fantasy;
+            }
+            .ak{
+                width: 40%;
+                height: 55%;
+                background-color: whitesmoke;
+                box-shadow: 0em 0em 2em blue;
+            }
+            form{
+                margin-top: 16%;
+                margin-bottom: 950%;
+            }
+            #con{
+                margin-top: 8%;
+
+            }
+            td{
+                height: 30px;
+            }
+            body{
+                background-image: url(Images/br.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .btn{
+                background-color: darkcyan;
+                border: none;
+                color: white;
+                padding: 13px 70px;
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-right: -88px;
+            }
+            .btn:hover{
+                background-color: skyblue;
+            }
+            .tind{
+                width: 200px;
+                height: 120px;
+                margin-left: -40px;
+            }
