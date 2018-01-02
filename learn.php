@@ -46,56 +46,65 @@ if(isset($_POST['search']))
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>-->
 
+<form action="<?php echo $config['url']; ?>" method="post">
 
+    <input type="hidden" name="business" value="<?php echo $config['business']; ?>">
+    <input type="hidden" name="return" value="<?php echo $config['return']; ?>">
+    <input type="hidden" name="cmd" value="_xclick-subscriptions">
 
-            <form action="<?php echo $config['url']; ?>" method="post">
+    <input type="hidden" name="item_name" value="OSM">
+    <input type="hidden" name="item_number" value="OSM">
 
-                <input type="hidden" name="business" value="<?php echo $config['business']; ?>">
-                 <input type="hidden" name="return" value="<?php echo $config['return']; ?>">
-                <input type="hidden" name="cmd" value="_xclick-subscriptions">
+    <input type="hidden" id="val" name="a3" value="500.00">
+    <input type="hidden" name="p3" value="1">
+    <input type="hidden" name="t3" value="M">
 
-                <input type="hidden" name="item_name" value="OSM">
-                <input type="hidden" name="item_number" value="OSM">
- 
-                <input type="hidden" id="val" name="a3" value="500.00">
-                <input type="hidden" name="p3" value="1">
-                <input type="hidden" name="t3" value="M">
+    <input type="hidden" name="src" value="1">
 
-                <input type="hidden" name="src" value="1">
+    <input type="hidden" name="on0" value="Format">Format <br />
+    <select id="sel" name="os0">
+        <option value="REGULAR">REGULAR</option>
+        <option value="PREMIUM">PREMIUM</option>
+    </select> <br />
 
-                <input type="hidden" name="on0" value="Format">Format <br />
-                <select id="sel" onchange="change()" name="os0">
-                    <option value="REGULAR" selected>REGULAR</option>
-                    <option value="PREMIUM">PREMIUM</option>
-                </select> <br />
+    <input type="image" name="submit"
+    src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
+    alt="Subscribe">
+    <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
+<script>
+    $(document).ready(function(){
+        $("#sel").change(function(){
+            if($(this).val()=='REGULAR'){
 
-                <input type="image" name="submit"
-                       src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
-                       alt="Subscribe">
-                <img alt="" width="1" height="1"
-                     src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
-            </form>
-            <script>
+                console.log($("#sel option[value='REGULAR']").prop("selected",true).val());
 
-                function change(){
-                    var sel = document.getElementById('sel');
-                    var val = document.getElementById('val');
+                <?php 
 
-                    if(sel.value.toString() == 'REGULAR'){
-                        val.value = 500.00;
-                        //alert(val.value.toString());
-                    }
-                    else if(sel.value.toString() == 'PREMIUM'){
-                        val.value = 700.00;
-                        // alert(val.value.toString());
-                    }
-                    //alert(sel.value.toString());
-                }
+                $_SESSION['price'] = 500; 
+                $_SESSION['type'] = 'REGULAR'; 
+                ?>
+            }
+            else if($(this).val()=='PREMIUM'){
 
-            </script>
-        </center>
-    </body>
-    <?php
-    include"footer.php";
-    ?>
+                console.log($("#sel option[value='PREMIUM']").prop("selected",true).val());
+
+                <?php 
+
+                $_SESSION['price'] = 700; 
+                $_SESSION['type'] = 'PREMIUM'; 
+
+                ?>
+            }
+
+           // window.location.href="learn.php?price="+$(this).val();
+       });
+    });
+</script>
+</center>
+</body>
+<?php
+include"footer.php";
+?>
 </hmtl>
