@@ -16,3 +16,9 @@ div.notification-data{
 span{
 	font-weight: bold;
 }
+span#premium{
+	margin-left: 50px;
+}
+span#total{
+	margin-left: 2px;
+}

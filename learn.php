@@ -80,6 +80,9 @@ if(isset($_POST['search']))
 
                 console.log($("#sel option[value='REGULAR']").prop("selected",true).val());
 
+                $("input[name=a3]").val("500");
+                console.log($("input[name=a3]").val());
+
                 <?php 
 
                 $_SESSION['price'] = 500; 
@@ -89,6 +92,9 @@ if(isset($_POST['search']))
             else if($(this).val()=='PREMIUM'){
 
                 console.log($("#sel option[value='PREMIUM']").prop("selected",true).val());
+
+                $("input[name=a3]").val("700");
+                console.log($("input[name=a3]").val());
 
                 <?php 
 

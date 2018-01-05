@@ -16,7 +16,8 @@ if($conn->query($sql)){
 		}
 		$sql = "INSERT INTO admin_notification(accno,user_email,subscriptiont_type,price) values('$_SESSION[idno]','$email','$_SESSION[type]','$_SESSION[price]')";
 		if($conn->query($sql)){
-
+			$_SESSION['type'] = "";
+			$_SESSION['price'] = 0;
 			echo "<h1>SUBSCRIPTION COMPLETE!</h1><br><a href='create.php'>Back to Create story page</a>";
 		}
 	}
