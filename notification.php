@@ -12,7 +12,7 @@ include "Connection.php";
 <body>
 
 	<div>
-		<h1>Notification Dashboard | ADMIN</h1>
+		<h1>Notification Dashboard | Administrator</h1>
 	</div>
 
 	<div class="notification-area">
@@ -56,7 +56,7 @@ include "Connection.php";
 			if($result->num_rows>0){
 				while ($row=$result->fetch_assoc()) {
 
-					echo "ID: <span>$row[id]</span> Email: <span>$row[user_email]</span> Has Paid to your website-<span>$row[price]</span> Type: <span>$row[subscriptiont_type]</span><br>";
+					echo "ID: <span>$row[id]</span> Email: <span>$row[user_email]</span> Has Paid to your website -<span>$row[price]</span> Type: <span>$row[subscriptiont_type]</span><br>";
 				}
 
 			}

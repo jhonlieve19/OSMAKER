@@ -174,7 +174,7 @@ else{
             border-radius: 5px;
         }
         .eau{
-             background-color: darkcyan;
+            background-color: darkcyan;
             border: none;
             color: white;
             padding: 10px 25px;
@@ -204,15 +204,31 @@ else{
                 <a href="Administrator.php">
                     <p class="title">
                         <img src="Images/hedd.png" style=" max-height: 120px;
-                                                                max-width:200px;
-                                                                margin-top: -59px;
-                                                                margin-left: -55px;" />
+                                                          max-width:200px;
+                                                          margin-top: -59px;
+                                                          margin-left: -55px;" />
                     </p>
+                </a>
+                <br>
+
+                <a href="notification.php">Transaction
+                    <?php
+                    $sql2="SELECT * FROM admin_notification WHERE subscriptiont_type='PREMIUM'";
+                    $resul=mysqli_query($conn, $sql2);
+                    $count=mysqli_num_rows($resul);
+                    if($count>0)
+                    {
+                        echo '<span class="badge" style="background-color: red">'.$count. '</span>';
+                    }
+
+                    ?>
                 </a>
                 <br>
                 <?php
                 include "adminsublinks.php";
                 ?>
+
+
             </div>
             <div class="lright">
 

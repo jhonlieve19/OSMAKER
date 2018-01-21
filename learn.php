@@ -46,71 +46,71 @@ if(isset($_POST['search']))
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>-->
 
-<form action="<?php echo $config['url']; ?>" method="post">
+            <form action="<?php echo $config['url']; ?>" method="post">
 
-    <input type="hidden" name="business" value="<?php echo $config['business']; ?>">
-    <input type="hidden" name="return" value="<?php echo $config['return']; ?>">
-    <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                <input type="hidden" name="business" value="<?php echo $config['business']; ?>">
+                <input type="hidden" name="return" value="<?php echo $config['return']; ?>">
+                <input type="hidden" name="cmd" value="_xclick-subscriptions">
 
-    <input type="hidden" name="item_name" value="OSM">
-    <input type="hidden" name="item_number" value="OSM">
+                <input type="hidden" name="item_name" value="OSM">
+                <input type="hidden" name="item_number" value="OSM">
 
-    <input type="hidden" id="val" name="a3" value="500.00">
-    <input type="hidden" name="p3" value="1">
-    <input type="hidden" name="t3" value="M">
+                <input type="hidden" id="val" name="a3" value="5.00">
+                <input type="hidden" name="p3" value="1">
+                <input type="hidden" name="t3" value="M">
 
-    <input type="hidden" name="src" value="1">
+                <input type="hidden" name="src" value="1">
 
-    <input type="hidden" name="on0" value="Format">Format <br />
-    <select id="sel" name="os0">
-        <option value="REGULAR">REGULAR</option>
-        <option value="PREMIUM">PREMIUM</option>
-    </select> <br />
+                <input type="hidden" name="on0" value="Format">Format <br />
+                <select id="sel" name="os0">
+                    <option value="REGULAR">REGULAR</option>
+                    <option value="PREMIUM">PREMIUM</option>
+                </select> <br />
 
-    <input type="image" name="submit"
-    src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
-    alt="Subscribe">
-    <img alt="" width="1" height="1"
-    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
-</form>
-<script>
-    $(document).ready(function(){
-        $("#sel").change(function(){
-            if($(this).val()=='REGULAR'){
+                <input type="image" name="submit"
+                       src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
+                       alt="Subscribe">
+                <img alt="" width="1" height="1"
+                     src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+            </form>
+            <script>
+                $(document).ready(function(){
+                    $("#sel").change(function(){
+                        if($(this).val()=='REGULAR'){
 
-                console.log($("#sel option[value='REGULAR']").prop("selected",true).val());
+                            console.log($("#sel option[value='REGULAR']").prop("selected",true).val());
 
-                $("input[name=a3]").val("500");
-                console.log($("input[name=a3]").val());
+                            $("input[name=a3]").val("5");
+                            console.log($("input[name=a3]").val());
 
-                <?php 
+                            <?php 
 
-                $_SESSION['price'] = 500; 
-                $_SESSION['type'] = 'REGULAR'; 
-                ?>
-            }
-            else if($(this).val()=='PREMIUM'){
+                            $_SESSION['price'] = 5; 
+                            $_SESSION['type'] = 'REGULAR'; 
+                            ?>
+                        }
+                        else if($(this).val()=='PREMIUM'){
 
-                console.log($("#sel option[value='PREMIUM']").prop("selected",true).val());
+                            console.log($("#sel option[value='PREMIUM']").prop("selected",true).val());
 
-                $("input[name=a3]").val("700");
-                console.log($("input[name=a3]").val());
+                            $("input[name=a3]").val("10");
+                            console.log($("input[name=a3]").val());
 
-                <?php 
+                            <?php 
 
-                $_SESSION['price'] = 700; 
-                $_SESSION['type'] = 'PREMIUM'; 
+                            $_SESSION['price'] = 10; 
+                            $_SESSION['type'] = 'PREMIUM'; 
 
-                ?>
-            }
+                            ?>
+                        }
 
-           // window.location.href="learn.php?price="+$(this).val();
-       });
-    });
-</script>
-</center>
-</body>
-<?php
-include"footer.php";
-?>
+                        // window.location.href="learn.php?price="+$(this).val();
+                    });
+                });
+            </script>
+        </center>
+    </body>
+    <?php
+    include"footer.php";
+    ?>
 </hmtl>
