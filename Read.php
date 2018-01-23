@@ -17,6 +17,41 @@ if(isset($_SESSION['Username'])){}
     if(isset($_GET['code'])){
 
         $seqNo = $_GET['code'];
+
+
+      
+        $sql = "SELECT * FROM vcounter where seqno = $seqNo";
+
+        $result=$conn->query($sql);
+        if($result->num_rows>0){
+             $sql = "UPDATE vcounter set viewcount=viewcount+1 where seqno=$seqNo";
+
+            if($conn->query($sql)){
+                /*echo "counted!";*/
+            }
+            else{
+            }
+        }
+        else{
+            $sql = "INSERT INTO vcounter values(null,$seqNo,1)";
+
+            if($conn->query($sql)){
+               /* echo "counted!";*/
+            }
+            else{
+               /* echo "not counted!";*/
+            }
+        }
+
+          $sql = "SELECT * FROM vcounter where seqno = $seqNo";
+
+        $result = $conn->query($sql);
+        if($result->num_rows >0){
+            while ($row = $result->fetch_assoc()) {
+                echo " &nbsp;Number of Viewers: $row[viewcount]";
+            }
+        }
+
     //echo $seqNo;
     }
     $result = $conn->query("SELECT * FROM uploads WHERE seqNo LIKE '$seqNo'");
@@ -158,9 +193,9 @@ if(isset($_SESSION['Username'])){}
                     $sql1 = "select * from uploads where isPaid=1 and seqNo=$_GET[code]";
                     $result= $conn->query($sql1);
                     if($result->num_rows > 0){
-                       $sql = "select * from book_payment where payerid=$_SESSION[idno] and seqNo=$_GET[code]";
-                       $result=$conn->query($sql);
-                       if($result->num_rows < 1){
+                     $sql = "select * from book_payment where payerid=$_SESSION[idno] and seqNo=$_GET[code]";
+                     $result=$conn->query($sql);
+                     if($result->num_rows < 1){
                         echo '| &emsp;
                         <a href="book_payment.php?seqNo='.$seqNo.'">Pay To Read Whole Story</a> ';  
                     }

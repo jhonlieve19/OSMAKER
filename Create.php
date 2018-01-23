@@ -67,109 +67,124 @@ if(isset($_SESSION['Username'])){}
 
     </head>
     <body>
-        <br><br><br><br>
-        <div class="con">
-            <label>Guidelines for making a story:</label>
-            <p>Reader and readers loves a stories but in making a story do not write a nonsense stories or else the admin must ignore your story. Write a story professionally. If you create a story specially for matures and It has a malicios scene or lines of your story you must checked the checkbox below. Thank you!</p>
-            <br>
-            <br>
-            <hr>
-            <div class="in-con">
-                <div class="in-cl">
-                    <form action="Insert_Up.php" method="post" enctype="multipart/form-data">
-                        <label>Cover Photo Here</label>
-                        <br><br>
-                        <?php
-                        if(isset($_SESSION['Username']))
+       <center>
+        <span style="background: red;color: white">
+            <?php
+            if(isset($_GET['message1'])){
+                echo $_GET['message1'];
+            } 
+            else if(isset($_GET['msg'])){
+                echo $_GET['msg'];
+            }
+            else if(isset($_GET['message'])){
+                echo $_GET['message'];
+            }
+            ?>            
+        </span>
+    </center>
+    <br><br><br><br>
+    <div class="con">
+        <label>Guidelines for making a story:</label>
+        <p>Reader and readers loves a stories but in making a story do not write a nonsense stories or else the admin must ignore your story. Write a story professionally. If you create a story specially for matures and It has a malicios scene or lines of your story you must checked the checkbox below. Thank you!</p>
+        <br>
+        <br>
+        <hr>
+        <div class="in-con">
+            <div class="in-cl">
+                <form action="Insert_Up.php" method="post" enctype="multipart/form-data">
+                    <label>Cover Photo Here</label>
+                    <br><br>
+                    <?php
+                    if(isset($_SESSION['Username']))
+                    {
+                        $author = $_SESSION['Username'];
+
+                        $exist = false;
+                        $result = $conn->query("SELECT AccNo FROM accounts WHERE Username = '$author'");
+                        if($result->num_rows > 0)
                         {
-                            $author = $_SESSION['Username'];
-
-                            $exist = false;
-                            $result = $conn->query("SELECT AccNo FROM accounts WHERE Username = '$author'");
-                            if($result->num_rows > 0)
+                            while ($row = $result->fetch_assoc())
                             {
-                                while ($row = $result->fetch_assoc())
-                                {
-                                    $accno = $row['AccNo'];
-                                }
-                                echo'
-                                <input type="text" name="tbauthor" value='.$author.' hidden>
-                                <input type="text" name="tbauthorid" value='.$accno.' hidden>';
+                                $accno = $row['AccNo'];
                             }
+                            echo'
+                            <input type="text" name="tbauthor" value='.$author.' hidden>
+                            <input type="text" name="tbauthorid" value='.$accno.' hidden>';
                         }
-                        ?>
-                        <input id="uploadImage" type="file" name="image" onchange="PreviewImage();" required />
-                        <br><br>
-                        <center>
-                            <img id="uploadPreview" style="width:450px; height:400px; "/>
-                        </center>
-                        <script type="text/javascript">
-                            function PreviewImage(){
-                                var oFReader = new FileReader();
-                                oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+                    }
+                    ?>
+                    <input id="uploadImage" type="file" name="image" onchange="PreviewImage();" required />
+                    <br><br>
+                    <center>
+                        <img id="uploadPreview" style="width:450px; height:400px; "/>
+                    </center>
+                    <script type="text/javascript">
+                        function PreviewImage(){
+                            var oFReader = new FileReader();
+                            oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
 
-                                oFReader.onload = function(oFREvent){
-                                    document.getElementById("uploadPreview").src = oFREvent.target.result;
-                                };
+                            oFReader.onload = function(oFREvent){
+                                document.getElementById("uploadPreview").src = oFREvent.target.result;
                             };
-                        </script>
+                        };
+                    </script>
+                </div>
+                <div class="in-cr">
+
+                    <label>Title</label><br>
+                    <input type="text" name="tbtitle" placeholder="Title" size="65px" required>
+
+                    <select name="tbcategory" required > 
+                        <option value="Action">Action</option> 
+                        <option value="Adventure">Adventure</option> 
+                        <option value="Fantasy">Fantasy</option> 
+                        <option value="Horror">Horror</option> 
+                        <option value="Romance">Romance</option>
+                    </select>
+                    <br><br>
+                    <label>Your Story Here</label>
+                    <textarea class="toradius" name="tbstory" rows="20" cols="90" placeholder="Drop your story..." required></textarea>
+                    <div class="checkbox">  
+                        <label>
+                            <input type="checkbox" name="tbmature" value="On">
+                            <p>This Story contains malicious things, check this box and be readable by 18y.o above</p>
+                        </label>
                     </div>
-                    <div class="in-cr">
+                    <button name="free">SUBMIT FOR FREE</button>
 
-                        <label>Title</label><br>
-                        <input type="text" name="tbtitle" placeholder="Title" size="65px" required>
+                    <?php 
+                    include "Connection.php";
 
-                        <select name="tbcategory" required > 
-                            <option value="Action">Action</option> 
-                            <option value="Adventure">Adventure</option> 
-                            <option value="Fantasy">Fantasy</option> 
-                            <option value="Horror">Horror</option> 
-                            <option value="Romance">Romance</option>
-                        </select>
-                        <br><br>
-                        <label>Your Story Here</label>
-                        <textarea class="toradius" name="tbstory" rows="20" cols="90" placeholder="Drop your story..." required></textarea>
-                        <div class="checkbox">  
-                            <label>
-                                <input type="checkbox" name="tbmature" value="On">
-                                <p>This Story contains malicious things, check this box and be readable by 18y.o above</p>
-                            </label>
-                        </div>
-                        <button name="free">SUBMIT FOR FREE</button>
+                    $sql = "select * from subscription where accno = '$_SESSION[idno]' and author_sub=0";
 
-                        <?php 
-                        include "Connection.php";
+                    $result = $conn->query($sql);
+                    if($result->num_rows > 0){
+                        echo "  <br><br><br><p>Wanna Earn and Learn more?</p><a href='learn.php'>Click Here</a>
+                        </form>";
+                    }
+                    else{
+                        echo "
+                        <input type='number' name='price' value=1 min=1 placeholder='Price for the book.' required>
+                        <button name='paid'>SUBMIT FOR PAID</button>";
+                    }
+                    ?>
 
-                        $sql = "select * from subscription where accno = '$_SESSION[idno]' and author_sub=0";
-
-                        $result = $conn->query($sql);
-                        if($result->num_rows > 0){
-                            echo "  <br><br><br><p>Wanna Earn and Learn more?</p><a href='learn.php'>Click Here</a>
-                            </form>";
-                        }
-                        else{
-                            echo "
-                            <input type='number' name='price' value=1 min=1 placeholder='Price for the book.' required>
-                            <button name='paid'>SUBMIT FOR PAID</button>";
-                        }
-                        ?>
-
-                    </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
-        </body>
-        <?php
-        include "footer.php";
-        ?>
-        </html>
+    </body>
+    <?php
+    include "footer.php";
+    ?>
+    </html>

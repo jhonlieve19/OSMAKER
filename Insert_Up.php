@@ -56,57 +56,73 @@ else
 	$price = mysqli_real_escape_string($conn,$_REQUEST['price']);
 
 	if(isset($_POST["free"])){
+		$sql = "SELECT * FROM uploads where title like '$title'";
 
-		if(empty($mature)){
-			if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),0,0)"))
-			{
-				echo "<br><br><br>".$accno;
-				move_uploaded_file($file_tmp,"Uploads/".$file_name);
-				header("location: Form1.php?message=Successfully upload");
-			}
-			else
-			{
-				echo " an error occured".$conn->error;
-			}
+		$result=$conn->query($sql);
+		if($result->num_rows>0){
+			header("location: Create.php?message1=Title already exist in the database");
 		}
-		else
-		{
-			if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now()),0,0"))
-			{
-				echo "<br><br><br>".$accno;
-				move_uploaded_file($file_tmp,"Uploads/".$file_name);
-				header("location: Form1.php?message=Successfully Upload");
+		else{
+			if(empty($mature)){
+				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),0,0)"))
+				{
+					echo "<br><br><br>".$accno;
+					move_uploaded_file($file_tmp,"Uploads/".$file_name);
+					header("location: Form1.php?message=Successfully upload");
+				}
+				else
+				{
+					echo " an error occured".$conn->error;
+				}
 			}
 			else
 			{
-				echo " an error occured".$conn->error;
+				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now()),0,0"))
+				{
+					echo "<br><br><br>".$accno;
+					move_uploaded_file($file_tmp,"Uploads/".$file_name);
+					header("location: Form1.php?message=Successfully Upload");
+				}
+				else
+				{
+					echo " an error occured".$conn->error;
+				}
 			}
 		}
 	}
 	else if(isset($_POST['paid'])){
-		if(empty($mature)){
-			if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),1,$price)"))
-			{
-				echo "<br><br><br>".$accno;
-				move_uploaded_file($file_tmp,"Uploads/".$file_name);
-				header("location: Form1.php?message=Successfully upload");
-			}
-			else
-			{
-				echo " an error occured".$conn->error;
-			}
+		$sql = "SELECT * FROM uploads where title like '$title'";
+
+		$result=$conn->query($sql);
+		if($result->num_rows>0){
+			$errors[] ='Title already exist in the database';
+			header("location: Create.php?message1=Title already exist in the database");
 		}
-		else
-		{
-			if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now()),1,$price"))
-			{
-				echo "<br><br><br>".$accno;
-				move_uploaded_file($file_tmp,"Uploads/".$file_name);
-				header("location: Form1.php?message=Successfully Upload");
+		else{
+			if(empty($mature)){
+				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),1,$price)"))
+				{
+					echo "<br><br><br>".$accno;
+					move_uploaded_file($file_tmp,"Uploads/".$file_name);
+					header("location: Form1.php?message=Successfully upload");
+				}
+				else
+				{
+					echo " an error occured".$conn->error;
+				}
 			}
 			else
 			{
-				echo " an error occured".$conn->error;
+				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now()),1,$price"))
+				{
+					echo "<br><br><br>".$accno;
+					move_uploaded_file($file_tmp,"Uploads/".$file_name);
+					header("location: Form1.php?message=Successfully Upload");
+				}
+				else
+				{
+					echo " an error occured".$conn->error;
+				}
 			}
 		}
 	}
