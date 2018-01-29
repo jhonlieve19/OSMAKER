@@ -25,7 +25,6 @@ if($_POST)
             if($userdb == $username &&  $passdb == $password )
             {
                 $_SESSION['Username'] = $username;
-
             }
             else{
                 header("location: index.php?message=Invalid User");

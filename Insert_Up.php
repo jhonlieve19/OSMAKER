@@ -25,11 +25,10 @@ if(isset($_FILES['image']))
 }
 if(in_array($file_ext,$extensions)===false)
 {
-	$errors[]="extension not allowed,please choose a JPEG or PNG file";
+	header("location: Create.php?msg=extension not allowed,please choose a JPEG or PNG file");
 }
 if($file_size > 3000)
 {
-	$errors[] ='File size must be exately 3MB or less';
 	header("location: Create.php?message=File size must be exately 3MB or less   ");
 }
 

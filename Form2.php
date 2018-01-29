@@ -141,7 +141,6 @@ if(isset($_POST['search']))
                     <input class="btnpass" type="submit" value="Read...">
                     </form>
                     </div>
-
                     ';
                 } 
             }
