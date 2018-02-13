@@ -239,6 +239,7 @@ if(isset($_POST['search']))
                         }
                     }
                 }
+                
                 //echo ageCalculator($dob);
                 $_age = ageCalculator($dob);
                 if($_age <= 18){

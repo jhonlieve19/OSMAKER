@@ -156,7 +156,10 @@ if(isset($_POST['search']))
                 <div class="detail-con">
 
 
-                    <h5><b>Personal Information</b><a href="EditAccount.php" id="acc"><button class="ea">Edit Account</button></a></h5>
+                    <h5><b>Personal Information</b><a href="EditAccount.php" id="acc"><button class="ea">Edit Account</button></a>
+                    <br><br><br><a href="authornotif.php">View my Transaction</a>
+                    
+                    </h5>
                     <hr>
                     <table width="300px">
                         <?php 

@@ -13,6 +13,7 @@ session_start();
 	<div class="container">
 		<div class="col-sm-12"><br></div>
 		<div>
+            <a href="Profile.php">Back to my Profile</a>
 			<h4>Author Notification</h4>
 			<div class="jumbotron">
 				<?php 

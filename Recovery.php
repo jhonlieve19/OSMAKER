@@ -102,7 +102,7 @@ include "Connection.php";
                 $message=" <p>Your password is </p><p>$passdb</p>";
                 $headers = "MIME-Version: 1.0" . "\r\n";
                 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                $headers .= 'From: ourstoy.juysolutions.com' . "\r\n";
+                $headers .= 'From: osmaker.juysolutions.com' . "\r\n";
                 mail($to, $subject, $message, $headers);
                 echo'haha';
             }
