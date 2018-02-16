@@ -7,6 +7,7 @@ include "Connection.php";
 ?>
 <!DOCTYPE html>
 <html>
+
     <head>
 
         <meta charset="utf-8">
@@ -18,55 +19,91 @@ include "Connection.php";
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <link rel="icon" href="Images/o.png">
-        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="Images/OSM_Icon.ico">
+
 
 
         <style>
-            .yemail, .tbeml{
-                margin-left: 13em;
+            @font-face
+            {
+                font-family:'Oxygen';
+                src: url(fonts/Oxygen-Regular.ttf) format('truetype');
             }
-            .yeee{
-                margin-left: 11.3em;
-                background-color: darkcyan;
-                border: none;
+            body
+            {
+                background: linear-gradient(100deg, #1f9b82, #0f6c98);
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .container
+            {
+                background-color: transparent;
+            }
+            #inside
+            {
+                margin: 100px 0 100px 0;
+                background-color: white;
+                padding: 2em 0 5em 4em;
+                border: 1px solid white;
+                border-radius: 4px;
+                 box-shadow: 0px 0px 54px 0px rgba(0,0,0,0.3);
+            }
+            .footlogo img
+            {
+                float: right;
+                width: 100px;
+                height: 55px;
+                position: relative;
+                top: 0px;
+                left: -30px;
+            }
+            .footlogo p
+            {
+                float: right;
+                position: relative;
+                left: 70px;
+                top: 50px;
+                color: #d3eae0
+            }
+            .footlogo
+            {
+                position: relative;
+                top: -40px;
+                left: 20px
+            }
+            #h3prop
+            {
+                font-family:'Oxygen';
                 color: white;
-                padding: 13px 30px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-            .btndsn{
-                background-color: darkcyan;
-                border: none;
-                color: white;
-                padding: 13px 30px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-            .btnsub{
-                background-color: darkcyan;
-                border-radius: 3px;
-                border-collapse: collapse;
+                background-image: url(Images/titlebgabout.png);
+                background-repeat: no-repeat;
+                background-size: cover;
                 width: 300px;
-                height: 30px;
-                border-style: none;
-                margin: 2px;
-                color: white;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                position: relative;
+                left: -14px;
+                top: 0px;
+                text-indent: 5%;
             }
-            .btnsub:hover{
-            background-color: skyblue;
-            box-shadow: 0em 0em 3em;
+            .liness
+            {
+                border: 0.5px solid white;
+                width: 1150px;
+                position: relative;
+                top: 80px
             }
+            .linesss
+            {
+                border: 0.5px solid white;
+                width: 1150px;
+                position: relative;
+                top: -50px
+            }
+            #btn
+            {
             
-
+            }
         </style>
 
         <style type="text/css">
@@ -83,176 +120,117 @@ include "Connection.php";
 
         </style>
     </head>
-    <nav class="navbar navbar-default" id="navcolor">
-        <div class="navbar-header">
-            <a class="navbar-brand" class="this" href="index.php">
-                <p class="title">
-                    <img class="lg" src="Images/hedd.png" width="" height="" style=" max-height: 120px;
-                                                                                          max-width:200px;
-                                                                                          margin-left: -27px;" />
-                </p>
-            </a>
-        </div>
-        
-    </nav>
     <body>
         <div class="container">
-            <br><br> <br><br>
-            <br><br>
             <?php
-            process_si_contact_form(); 
-            if (isset($_SESSION['ctform']['error']) &&  $_SESSION['ctform']['error'] == true):?>
-            <div class="error">Invalid captcha key</div><br>
-            <?php elseif (isset($_SESSION['ctform']['success']) && $_SESSION['ctform']['success'] == true):?>
-            <div class="success">Message sent! go to your email account now</div><br />
-            <?php endif; ?>
+            include "nav2.php";
+            ?>
+            <br>
+            <div class="liness"></div>
+            <div id = "inside">
+                
+                <h4 id="h3prop">Password Recovery</h4>
+                <?php
+                process_si_contact_form(); 
+                if (isset($_SESSION['ctform']['error']) &&  $_SESSION['ctform']['error'] == true):?>
+                <div class="error">Invalid captcha key</div><br>
+                <?php elseif (isset($_SESSION['ctform']['success']) && $_SESSION['ctform']['success'] == true):?>
+                <div class="success">Message sent! go to your email account now</div><br />
+                <?php endif; ?>
 
-            <h2>Fill out below to retrieve your password</h2>
-            <p>After you complete and submit, your password will be sent to your email.</p>
-            <br><br><br>
+                <h2>Fill out below to retrieve your password</h2>
+                <p>After you complete and submit, your password will be sent to your email.</p>
+                <br><br><br>
 
-            <form method="post" action="" id="contact_form">
-                <input type="hidden" name="do" value="contact">
-                <label>E-mail* (required)</label>
-                <input type="email" name="email" placeholder="E-mail" size="50px" required>
-                <div>
-                    <br>
-                    <?php
-                    require_once 'securimage.php';
-                    $options = array();
-                    $options['input_name']             = 'ct_captcha'; // change name of input element for form post
-                    $options['disable_flash_fallback'] = false; // allow flash fallback
-                    if (!empty($_SESSION['ctform']['captcha_error'])) {
+                <form method="post" action="" id="contact_form">
+                    <input type="hidden" name="do" value="contact" id="btn">
+                    <label>E-mail Address</label>
+                    <input type="email" id="btn" name="email" placeholder="E-mail" size="50px" required>
+                    <div>
+                        <br>
+                        <?php
+                        require_once 'securimage.php';
+                        $options = array();
+                        $options['input_name']             = 'ct_captcha'; // change name of input element for form post
+                        $options['disable_flash_fallback'] = false; // allow flash fallback
+                        if (!empty($_SESSION['ctform']['captcha_error'])) {
 
-                        $options['error_html'] = $_SESSION['ctform']['captcha_error'];
-                    }
-                    echo "<div id='captcha_container_1'>\n";
-                    echo Securimage::getCaptchaHtml($options);
-                    echo "\n</div>\n";
-                    ?>
-                </div>
-                <br>
-                <input class="btndsn" type="submit" value="Submit">
-            </form>
-            <!-- MODAL FOR LOGIN -->
-            <div class="modal fade" id="Login" role="dialog">
-                <div class="modal-dialog" id="mdl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <center>
-                                <img src="Images/hedd.png">
-                            </center>
-                        </div>
-                        <div class="modal-body">
-                            <center>
-                                <p>Enter your valid account. If you don`t have an account, sign up.</p>
-                            </center>
-                            <br>
-                            <div class="mcon">
-                                <form action="" method="post">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="email" type="text" class="form-control" name="tbuser" placeholder="Username" size="5" required>
-                                    </div>
-                                    <br>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input id="password" type="password" class="form-control" name="tbpassword" placeholder="Password" size="5" required>
-                                    </div>
-                                    <br>
-                                    <center>
-                                        <input class="btnsub" name="buttonset" type="submit" value="Login" >
-                                    </center>
-                                    <br>
-                                    <center>    
-                                        <a href="captcha.php">Forgot Password?</a>
-                                    </center>
-                                    <br>
-                                </form>
-                            </div>
-                        </div>
+                            $options['error_html'] = $_SESSION['ctform']['captcha_error'];
+                        }
+                        echo "<div id='captcha_container_1'>\n";
+                        echo Securimage::getCaptchaHtml($options);
+                        echo "\n</div>\n";
+                        ?>
                     </div>
-                </div>
-            </div>
-            <!--END OF MODAL-->
-        </div>
-    </body>
-    <br>
-    <br>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <br><label class="yemail">Your Email here:</label><input class="tbeml" type="email" name="email"/> <br/><br/>
-        <input class="yeee" type="submit" name="send" value="Send"/>
 
-    
-    </div>
-</center>
-</div>    
-<?php
-if(isset($_POST['send']))
-{
-    //include 'config.php';
-    $email= htmlentities($_POST['email']);
-    $result = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
-    if($result->num_rows > 0)
-    {
-        while ($row = $result->fetch_array())
-        {   
-            $passw = $row['5'];
-        }
-        //echo $passw;
-        mail($email,"Forgot Password","Your password is $passw ", "From: ourstory.com\r\n");
-        echo"<script type='text/javascript'>alert('Email Sent.')</script>";
-    }
-}
-else
-{
-    // echo"<script type='text/javascript'>alert('Email not found.')</script>";
-}
-?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<?php
-include "footer.php";
-?>
+                    <input class="btndsn" type="submit" value="Submit">
+                </form>
+                <!-- MODAL FOR LOGIN -->
 
-</html>
-<?php
-function process_si_contact_form()
-{
-    $_SESSION['ctform'] = array(); 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && @$_POST['do'] == 'contact') {
-        foreach($_POST as $key => $value) {
-            if (!is_array($key)) {
-                if ($key != 'ct_message') $value = strip_tags($value);
-                $_POST[$key] = htmlspecialchars(stripslashes(trim($value)));
-            }
-        }
-        $captcha = $_POST['ct_captcha']; // the user's entry for the captcha code
-        $name    = substr($name, 0, 64); 
-        $errors = array();  
+                <!--END OF MODAL-->
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <br><label class="yemail">Your Email here:</label><input class="tbeml" type="email" name="email"/> <br/><br/>
+                    <input type="submit" id="btn" name="send" value="Send"/>
 
-        if (sizeof($errors) == 0) {
-            require_once dirname(__FILE__) . '/securimage.php';
-            $securimage = new Securimage();
-            if ($securimage->check($captcha) == false) {
-                $errors['captcha_error'] = '<br/>';
 
-            }
-        }
-        if (sizeof($errors) == 0) {
-            // no errors, send the form
-            $_SESSION['ctform']['error'] = false;  // no error with form
-            $_SESSION['ctform']['success'] = true; 
-            if($_POST)
-            {
-                $email= htmlentities($_POST['email']);
-                //echo 'tama ka';     
-                /* 
+
+                    <?php
+                    if(isset($_POST['send']))
+                    {
+                        //include 'config.php';
+                        $email= htmlentities($_POST['email']);
+                        $result = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
+                        if($result->num_rows > 0)
+                        {
+                            while ($row = $result->fetch_array())
+                            {   
+                                $passw = $row['5'];
+                            }
+                            //echo $passw;
+                            mail($email,"Forgot Password","Your password is $passw ", "From: ourstory.com\r\n");
+                            echo"<type='text/javascript'>alert('Email Sent.')</script>";
+                        }
+                    }else
+                    {
+                        // echo"<script type='text/javascript'>alert('Email not found.')</script>";
+                    }
+                    ?>
+
+
+                </form>
+
+                <?php
+                function process_si_contact_form()
+                {
+                    $_SESSION['ctform'] = array(); 
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST' && @$_POST['do'] == 'contact') {
+                        foreach($_POST as $key => $value) {
+                            if (!is_array($key)) {
+                                if ($key != 'ct_message') $value = strip_tags($value);
+                                $_POST[$key] = htmlspecialchars(stripslashes(trim($value)));
+                            }
+                        }
+                        $captcha = $_POST['ct_captcha']; // the user's entry for the captcha code
+                        $name    = substr($name, 0, 64); 
+                        $errors = array();  
+
+                        if (sizeof($errors) == 0) {
+                            require_once dirname(__FILE__) . '/securimage.php';
+                            $securimage = new Securimage();
+                            if ($securimage->check($captcha) == false) {
+                                $errors['captcha_error'] = '<br/>';
+
+                            }
+                        }
+                        if (sizeof($errors) == 0) {
+                            // no errors, send the form
+                            $_SESSION['ctform']['error'] = false;  // no error with form
+                            $_SESSION['ctform']['success'] = true; 
+                            if($_POST)
+                            {
+                                $email= htmlentities($_POST['email']);
+                                //echo 'tama ka';     
+                                /* 
                 echo '<br>'.$email;
                 $result = $conn->query("SELECT * FROM accounts WHERE Email = '$email'");
                 if($result->num_rows > 0)
@@ -272,18 +250,24 @@ function process_si_contact_form()
                 {
                     echo"<script type='text/javascript'>alert('Email not found.')</script>";
                 }*/
-                header("location:index.php?ml=$email");
-            }
-
-
-
-
-        } 
-        else{
-            foreach($errors as $key => $error) {
-                $_SESSION['ctform'][$key] = "<span class=\"error\">$error</span>";
-            }
-            $_SESSION['ctform']['error'] = true; // set error floag
-        }
-    }
-}
+                                header("location:index.php?ml=$email");
+                            }
+                        } 
+                        else{
+                            foreach($errors as $key => $error) {
+                                $_SESSION['ctform'][$key] = "<span class=\"error\">$error</span>";
+                            }
+                            $_SESSION['ctform']['error'] = true; // set error floag
+                        }
+                    }
+                }
+                ?>
+            </div>
+            <div class="linesss"></div>
+            <div class="footlogo">
+                <img src="Images/osmlogo.png">
+                <p>© OSM Developers, 2017</p>
+            </div>
+        </div>
+    </body>
+</html>

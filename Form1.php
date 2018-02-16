@@ -63,51 +63,102 @@ if(isset($_POST['search']))
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <link rel="icon" href="Images/o.png">
-        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="Images/OSM_Icon.ico">
+        <link href="css/hover.css" rel="stylesheet">
+        
+
+
         <style type="text/css">
             #rght{
                 margin-left: 6.7em;
 
             }
-            .tb{
-                margin: 7px 70px 0px 5px;
-                border-bottom-color: transparent;
-                border-style:hidden;
-                padding: 3px;
-                border-radius: 5px;
-            }
+
             .con{
-                background-color: #f7f7f7;
+                margin-top: 8em;
+                background-color: transparent;
                 height: auto;
-                width: auto;
                 padding: 1em;
-                padding-bottom: 7em;
+                border: 1px;
             }
-            .ins{
+           #ins{
                 background-color: white;
-                height: auto;
-                width: 247px;
-                margin: 1em;
+                height: 300px;
+                width: 191px;
+                margin: 1em 1em 1em 1em;
                 display: inline-block;
+                border-radius: 4px;
                 padding: 1%;
-                box-shadow: 0px 5px 4px 1px #dcdcdc;
-            }
-            img{
-                width:218px;
-                height:250px;
-                margin-bottom: 4%;
+                font-family:'Oxygen';
+                position: relative;
+                box-shadow: 0px 1px 5px 0px rgba(64,64,64,1);
 
             }
-            .btnpass{ 
+            #ins:hover
+            {
+                border-bottom: 5px solid #E81D29;
+            }
+            .hvr-grow-shadow {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px transparent;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: box-shadow, transform;
+                transition-property: box-shadow, transform;
+            }
+            .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+                box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+             .hvr-fade {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px transparent;
+                overflow: hidden;
+                -webkit-transition-duration: 0.2s;
+                transition-duration: 0.2s;
+                -webkit-transition-property: color, background-color;
+                transition-property: color, background-color;
+            }
+            .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+               
+                color: white;
+            }
+
+            img{
+                width:175px;
+                height:175px;
+                position: relative;
+                left: -4px;
+                top: -4px;
+                margin-bottom: 4%;
+                border-radius: 2px
+
+            }
+            #btnpass{
                 width: auto;
                 height: auto;
-                background-color: transparent;
-                font-family: Century Gothic;
-                color: darkcyan;
+                color: #E81D29;
                 font-size: 15px;
-                border-style: none;
+                border:1px solid #E81D29;
                 font-weight:100;
+                float: right;
+                border-radius: 30px;
+                padding: 2px 8px 2px 8px;
+                background-color: white;
+            }
+            #btnpass:hover
+            {
+                border-radius: 30px;
+                padding: 2px 8px 2px 8px;
+                background-color: #E81D29;
+                color: white;
             }
             .h-link{
                 display: inline-block;
@@ -160,12 +211,62 @@ if(isset($_POST['search']))
             .button:hover{
                 background-color: skyblue;
             }
+            .container
+            {
+                background-color: transparent;
 
+            }
+            body
+            {
+                background: linear-gradient(100deg, #1f9b82, #0f6c98);
+            }
+            a
+            {
+                font-family: 'Oxygen';
+            }
+            .footlogo p
+            {
+                float: right;
+                position: relative;
+                left: 70px;
+                top: 50px;
+                color: white
+            }
+            .footlogo img
+            {
+                float: right;
+                width: 100px;
+                height: 55px;
+                position: relative;
+                top: 0px;
+                left: -30px;
+            }
 
+            #h3prop
+            {
+                font-family:'Oxygen';
+                color: white;
+                background-image: url(Images/titlebgform2.png);
+                background-repeat: no-repeat;
+                width: 240px;
+                height: 38px;
+                padding-top: 5px;
+                padding-bottom: 8px;
+                position: relative;
+                left: -14px;
+                top: -40px;
+                text-indent:30px;
+            }
+
+            .liness
+            {
+                border: 0.5px solid white;
+                width: 1150px;
+                position: relative;
+                top: 80px
+            }
         </style>
-        <?php
-        include "nav.php";
-        ?>
+
         <script>
             $(document).ready(function(){
                 $('[data-toggle="popover"]').popover();   
@@ -192,13 +293,20 @@ if(isset($_POST['search']))
 
     </head>
     <body>
-        <br>
+
         <div class="container">
+            <?php
+            include "nav.php";
+            ?>
+            
+            
+            <div class="liness">
+            </div>
             <div class="con">
-                <hr>
-                &emsp; <a class="h-link" href="Form1.php"><h4 style="text-indent:2%;">Stories</h4></a>&emsp;
-                <p style="text-indent:2%;">Just for fun</p>
-                <hr>
+                <br><br>
+                &emsp; <a class="h-link" href="Form1.php"><h3 id ="h3prop">All Story</h3></a>&emsp;
+                <p style="text-indent:2%;"></p>
+
 
                 <?php 
 
@@ -243,7 +351,7 @@ if(isset($_POST['search']))
                 $_age = ageCalculator($dob);
                 if($_age <= 18){
                     //echo 'minor';
-                    
+
                     $result = $conn->query("select * from Uploads WHERE exclusive LIKE 'Off' AND status = 'display' ORDER BY seqNo Desc LIMIT $start, $limit");
                     if($result->num_rows > 0)
                     {
@@ -256,16 +364,15 @@ if(isset($_POST['search']))
 
                             echo '
 
-						   <div class="ins">
+						   <div class = "hvr-grow-shadow" id = "ins" >
 								<form action="Read.php?code='.$seq.'" method="post">
 									<input type="text" name="tbseq" value="'.$seq.'" hidden>
 										<center>		
 											<img src="Uploads/'.$filename.'">
 										</center>
-										<label>'.$title.'</label>
-
-									<p>By: '.$auth.'</p> 
-										<input class="btnpass" type="submit" value="Read...">
+										<h5>'.$title.'</h5>
+								    <h6>by: '.$auth.'</h6> 
+										<input id="btnpass" class= "hvr-fade" type="submit" value="Rea">
 								</form>
 							</div>
 
@@ -273,12 +380,12 @@ if(isset($_POST['search']))
                         } 
                     }
 
-                   echo "<br><br><br><br><br>";
+                    echo "<br><br><br><br><br>";
                     $conn=mysql_connect("localhost","root","");
                     mysql_select_db("storytelleronline",$conn);
                     $res=mysql_num_rows(mysql_query("select * from Uploads"));
                     $total=ceil($res/$limit);
-                    
+
                     $total=ceil($res/$limit);
 
                     if($id>1)
@@ -316,16 +423,15 @@ if(isset($_POST['search']))
 
                             echo '
 
-						   <div class="ins">
+						   <div id="ins" class="hvr-grow-shadow">
 								<form action="Read.php?code='.$seq.'" method="post">
 									<input type="text" name="tbseq" value="'.$seq.'" hidden>
 										<center>		
 											<img src="Uploads/'.$filename.'">
 										</center>
-										<label>'.$title.'</label>
-
-									<p>By: '.$auth.'</p> 
-										<input class="btnpass" type="submit" value="Read...">
+										<h5>'.$title.'</h5>
+								    <h6>by: '.$auth.'</h6>
+										<input id="btnpass" class= "hvr-fade" type="submit" value="Read Story">
 								</form>
 							</div>
 
@@ -338,7 +444,7 @@ if(isset($_POST['search']))
                     mysql_select_db("storytelleronline",$conn);
                     $res=mysql_num_rows(mysql_query("select * from Uploads"));
                     $total=ceil($res/$limit);
-                    
+
                     $total=ceil($res/$limit);
 
                     if($id>1)
@@ -368,19 +474,28 @@ if(isset($_POST['search']))
 
                 ?>
 
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="liness">
+                </div>
+                <br>
             </div>
             <br>
-
             <br>
+            <br>
+            <br>   
 
+            <div class="footlogo">
+                <img src="Images/osmlogo.png">
+                <p>© OSM Developers, 2017</p>
+            </div>
+        </div>
 
-        </div>
-        </div>
-    <br>
-    <br>
-    <br>
     </body>
-<?php
-include "footer.php";
-?>
+
 </html>

@@ -61,42 +61,66 @@ $_SESSION['price'] = 1;
     <script src="js/bootstrap.min.js"></script>
     <link rel="icon" href="Images/o.png">
     <link rel="stylesheet" href="index.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
     <head>
+        <style type="text/css">
+            @font-face
+            {
+                font-family:'Oxygen';
+                src: url(fonts/Oxygen-Regular.ttf) format('truetype');
+            }
+            #paypal
+            {
+                
+            }
+            #logo
+            {
+                margin: 50px 0 50px 0
+            }
+            #logoimg
+            {
+                width: 300px;
+                height: 230px
+            }
+            #word
+            {
+                 font-family:'Oxygen';
+            }
 
+        </style>
 
     </head>
     <body>
         <center>
-            <p>
-                On this content you are going to subscribe the Online Story Maker and have some transaction in order for you to earn.
-            </p>
-            <br><br><br>	
+            <div id = paypal>
+                <div id = "logo">
+                    <img src ="Images/osm_icon.ico" alt="OSM" id = "logoimg"/>
+                </div>
+                <center><p id="word">
+                    On this page you are going to subscribe the Online Story Maker via Paypal transaction click the button below to continue.
+                    </p></center>
 
-            <form action="<?php echo $config['url']; ?>" method="post">
+                <form action="<?php echo $config['url']; ?>" method="post">
 
-                <input type="hidden" name="business" value="<?php echo $config['business'] ?>">
-                 <input type="hidden" name="return" value="<?php echo $config['return'] ?>">
-                <input type="hidden" name="cmd" value="_xclick-subscriptions">
-
-                <input type="hidden" name="item_name" value="OSM">
-                <input type="hidden" name="item_number" value="OSM">
- 
-                <input type="hidden" id="val" name="a3" value="<?php echo $config['price'] ?>">
-                <input type="hidden" name="p3" value="1">
-                <input type="hidden" name="t3" value="M">
-
-                <input type="hidden" name="src" value="1">
-                <br />
-
-                <input type="image" name="submit"
-                       src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
-                       alt="Subscribe">
-                <img alt="" width="1" height="1"
-                     src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
-            </form>
+                    <input type="hidden" name="business" value="<?php echo $config['business'] ?>">
+                    <input type="hidden" name="return" value="<?php echo $config['return'] ?>">
+                    <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                    <input type="hidden" name="item_name" value="OSM">
+                    <input type="hidden" name="item_number" value="OSM">
+                    <input type="hidden" id="val" name="a3" value="<?php echo $config['price'] ?>">
+                    <input type="hidden" name="p3" value="1">
+                    <input type="hidden" name="t3" value="M">
+                    <input type="hidden" name="src" value="1">
+                    
+                    <center><img src="Images/paypallogo.png" alt="paypal"></center>
+                    <input type="image" name="submit class"
+                           src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
+                           alt="Subscribe">
+                    <img alt="" width="1" height="1"
+                         src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+                </form>
+            </div>
         </center>
     </body>
-    <?php
-    include"footer.php";
-    ?>
+
 </hmtl>

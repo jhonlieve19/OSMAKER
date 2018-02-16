@@ -5,70 +5,228 @@ include "Connection.php";
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="notification.css">
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="icon" href="Images/OSM_Icon.ico">
 
-	<div>
-		<h1>Notification Dashboard | Administrator</h1>
-	</div>
+    <head>
+        <title></title>
 
-	<div class="notification-area">
-		<div class="notification-data">
-			<?php 
+    </head>
+    <style type="text/css">
+        @font-face
+        {
+            font-family:'Oxygen';
+            src: url(fonts/Oxygen-Regular.ttf) format('truetype');
+        }
+        #rght{
+            margin-left: 30em;
+        }
+        .head{
+            background-color: white;
+            width: auto;
+            height: auto;
+            padding: 0em 2em 0em 2em;
+        }
+        .in{
+            width: auto;
+            height: auto;
+            background-color:dimgray;
+            padding: 1em 3em 1em 3em;
+            color: #6FB7E9;
+        }
+        #rght{
+            margin-left: 855px;
 
-			include "Connection.php";
+        }
 
-			$sql = "SELECT count(*) as TotalRegular from admin_notification where subscriptiont_type = 'REGULAR'";
+        #rght{
+            padding-left:;
+        }
+        .btn{
 
-			$result=$conn->query($sql);
-			if($result->num_rows>0){
-				while ($row=$result->fetch_assoc()) {
-					echo "<span>Total Regular USER: $row[TotalRegular]</span>";
-				}
-			}
+        }
+        .nv{
+            padding: 0.1px;
+        }
+        .left{
+            width: 290px;
+            height: 600px;
+            float: left;
+            padding: 0em 0em 0em 4em;
+        }
+        .lright{
+            width: 1003px;
+            height: 1000px;
+            background-color: ghostwhite;
+            margin-left: 290px;
+            padding: 2em;
+        }
+        .left,.lrigh{
+            display: inline-block;
+           
 
-			$sql = "SELECT count(*) as TotalPremium from admin_notification where subscriptiont_type = 'PREMIUM'";
+        }
+        .left
+        {
+            height: 300px
+        }
 
-			$result=$conn->query($sql);
-			if($result->num_rows>0){
-				while ($row=$result->fetch_assoc()) {
-					echo "<span id='premium'> Total Premium USER: $row[TotalPremium]</span>";
-				}
-			}
+        h3{
+            margin-left: 270px;
+            color: silver;
 
-			$sql = "SELECT sum(price) as Total from admin_notification";
+        }
+        .crtleft{
+            width: auto;
+            height: auto;
+            background-color: #E9F2F9;
+            padding: 1em;
+        }
+        table,tr{
 
-			$result=$conn->query($sql);
-			if($result->num_rows>0){
-				while ($row=$result->fetch_assoc()) {
-					echo "<span id='premium'> Total Website CASH: $row[Total]</span><br>";
-				}
-			}
+        }
+        form{
+            display: inline-block;
+        }
+        .da{
+            background-color: darkcyan;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .vew, .wev{
+            background-color: darkcyan;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .notification-area
+        {
+            float: left;
+            width: 1010px;
+            padding-bottom: 100px;
+            padding-left: 50px;
+            font-family:'Oxygen';
+            background-color: ghostwhite
+        }
+        #for
+        {
+            clear: both;
+        }
+        #red
+        {
+            color: red;
+            font-weight: 800
+        }
+         #blue
+        {
+            color: dodgerblue;
+            font-weight: 800
+        }
+          #green
+        {
+            color: green;
+            font-weight: 800
+        }
+        #email
+        {
+            color: blue;
+            text-decoration: underline
+        }
+    </style>
+    <body>
 
-			echo "<hr>";
-			echo "<script>console.log('CONSOLE WORKS!');</script>";
+        <div class="in">
+            <h3>Notification Dashboard | Administrator</h3>
+        </div>
+        <div class="head">
+            <div class="left">
+                <a href="Administrator.php">
+                    <p class="title     ">
+                        <img src="Images/OSM_Icon.ico" style=" max-height: 120px;
+                                                              max-width:200px;
+                                                              margin-top: -59px;
+                                                              margin-left: -55px;" />
+                    </p>
+                </a>
+                <br>
+                <?php
+                include "adminsublinks.php";
+                ?>
+            </div>
+            <div class="notification-area">
+                <div class="notification-data">
+                    <br><br><br>
+                    <?php 
 
-			$sql = "SELECT * FROM admin_notification ORDER BY accno DESC"; 
-			$result=$conn->query($sql);
-			if($result->num_rows>0){
-				while ($row=$result->fetch_assoc()) {
+                    include "Connection.php";
 
-					echo "ID: <span>$row[id]</span> Email: <span>$row[user_email]</span> Has Paid to your website -<span>$row[price]</span> Type: <span>$row[subscriptiont_type]</span><br>";
-				}
+                    $sql = "SELECT count(*) as TotalRegular from admin_notification where subscriptiont_type = 'REGULAR'";
 
-			}
+                    $result=$conn->query($sql);
+                    if($result->num_rows>0){
+                        while ($row=$result->fetch_assoc()) {
+                            echo "<span>Total Regular User&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <b id ='blue'>$row[TotalRegular]</b></span><br/>";
+                        }
+                    }
 
-			?>
-		</div>
-	</div>
+                    $sql = "SELECT count(*) as TotalPremium from admin_notification where subscriptiont_type = 'PREMIUM'";
 
-	<?php 
+                    $result=$conn->query($sql);
+                    if($result->num_rows>0){
+                        while ($row=$result->fetch_assoc()) {
+                            echo "<span id='premium'> Total Premium USER&nbsp&nbsp&nbsp: <b id='red'>$row[TotalPremium]</b></span><br/>";
+                        }
+                    }
 
-	include "footer.php";
+                    $sql = "SELECT sum(price) as Total from admin_notification";
 
-	?>
-</body>
+                    $result=$conn->query($sql);
+                    if($result->num_rows>0){
+                        while ($row=$result->fetch_assoc()) {
+                            echo "<span id='premium'> Total Website Cash&nbsp&nbsp&nbsp&nbsp&nbsp : <b id='green'>$$row[Total]</b></span><br>";
+                        }
+                    }
+
+                    echo "<hr>";
+                    echo "<script>console.log('CONSOLE WORKS!');</script>";
+
+                    $sql = "SELECT * FROM admin_notification ORDER BY accno DESC"; 
+                    $result=$conn->query($sql);
+                    if($result->num_rows>0){
+                        while ($row=$result->fetch_assoc()) {
+
+                            echo "ID: <span>$row[id]</span> Email: <span id = 'email'>$row[user_email]</span> Has Paid to your website :<b id='green'>$$row[price]</b> Type: <span><b id='red'>$row[subscriptiont_type]</b></span><br>";
+                        }
+
+                    }
+
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div id="fot">
+            <?php 
+
+            include "footer.php";
+
+            ?>
+        </div>
+    </body>
 </html>

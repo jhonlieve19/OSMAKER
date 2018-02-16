@@ -111,11 +111,26 @@ else
         }
         form,.btnpass{
           display: inline-block;
+            
         }
         .link{
             display: inline-block;
         }
-      
+      #btnpass{
+            display: inline-block;
+            border: 1px solid darkcyan;
+            background-color: darkcyan;
+            padding: 0.5em 1em 0.5em 1em;
+            color: white;
+            border-radius: 5px;
+            width: 200px
+            
+        }
+        #btnpass:hover{
+           background-color: white;
+            border: 1px solid darkcyan;
+            color:darkcyan
+        }
 
     </style>
     <head>
@@ -195,11 +210,12 @@ else
                                 <br>
 								
                                 <br>
-									<input class="btnpass" type="submit" value="Accept">
+									<input id="btnpass" type="submit" value="Accept">
 							</form>
+                            <br>
                             <form action="admindeletestry.php" method="post">
-								<input type="text" name="id" value="'.$seq.'" hidden>
-								<input class="btnpass" type="submit" value="Delete">
+								<input type="text" name="id" value="    '.$seq.'" hidden>
+								<input id="btnpass" type="submit" value="Delete">
 							</form>
 						</div>
 

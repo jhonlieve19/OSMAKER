@@ -17,8 +17,8 @@ else
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <link rel="icon" href="Images/o.png">
-    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="Images/OSM_Icon.ico">
+  
     <style type="text/css">
         #rght{
             margin-left: 30em;
@@ -67,18 +67,7 @@ else
             display: inline-block;
 
         }
-        .accs{
-            color: black;
-            line-height: 2.1;
-            text-shadow: 0.1em 0.1em 0.3em white;
-        }
-        .accs:hover{
-            color:darkred;
-            font-weight:bolder;
-            font-size: 15px;
-            text-transform: capitalize;
-            text-decoration: none;
-        }
+       
         .admint{
             margin-left: 270px;
             color: silver;
@@ -132,13 +121,13 @@ else
     <body>
         <div class="in">
 
-            <h3 class="admint">Admin | Add/Manage Contest</h3>        
+            <h3 class="admint">Admin | Manage Contest</h3>        
         </div>
         <div class="head">
             <div class="left">
                 <a href="Administrator.php">
                     <p class="title">
-                        <img src="Images/hedd.png" style=" max-height: 120px;
+                        <img src="Images/OSM_Icon.ico" style=" max-height: 120px;
                                                                 max-width:200px;
                                                                 margin-top: -59px;
                                                                 margin-left: -55px;" />

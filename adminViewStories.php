@@ -17,8 +17,7 @@ else
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <link rel="icon" href="Images/o.png">
-    <link rel="stylesheet" href="index.css">
+         <link rel="icon" href="Images/OSM_Icon.ico">
     <style type="text/css">
         #rght{
             margin-left: 30em;
@@ -67,18 +66,10 @@ else
             display: inline-block;
 
         }
-        .accs{
-            color: black;
-            line-height: 2.1;
-            text-shadow: 0.1em 0.1em 0.3em white;
+        #accs{
+            
         }
-        .accs:hover{
-            color: darkred;
-            font-weight:bolder;
-            font-size: 15px;
-            text-transform: capitalize;
-            text-decoration: none;
-        }
+        
         .admint{
             margin-left: 270px;
             color: silver;
@@ -119,16 +110,20 @@ else
             padding: 1%;
             box-shadow: 0px 5px 4px 1px #dcdcdc;
         }
-        .btnsubm{
+        #btnsubm{
             display: inline-block;
-            border-style: none;
-            background-color: skyblue;
+            border: 1px solid darkcyan;
+            background-color: darkcyan;
             padding: 0.5em 1em 0.5em 1em;
             color: white;
+            border-radius: 5px;
+            width: 200px
             
         }
-        .btnsubm:hover{
-            background-color: cornflowerblue;
+        #btnsubm:hover{
+           background-color: white;
+            border: 1px solid darkcyan;
+            color:darkcyan
         }
 
     </style>
@@ -149,7 +144,7 @@ else
             <div class="left">
                 <a href="Administrator.php">
                     <p class="title">
-                        <img src="Images/hedd.png" style=" max-height: 120px;
+                        <img src="Images/OSM_Icon.ico" style=" max-height: 120px;
                                                                 max-width:200px;
                                                                 margin-top: -59px;
                                                                 margin-left: -55px;" />
@@ -196,11 +191,11 @@ else
 									<label>'.$title.'</label>
 
 								<p>By: '.$auth.'</p> 
-									<input class="btnsubm" type="submit" value="View...">
+									<input class="hvr-fade" id="btnsubm" type="submit" value="View">
 							</form>
                              <form class="bnt" action="admindeletestry.php" method="post">
 								<input type="text" name="id" value="'.$seq.'" hidden>
-								<input class="btnsubm" type="submit" value="Delete">
+								<input class="hvr-fade" id="btnsubm" type="submit" value="Delete">
 							</form>
 						</div>
 
@@ -222,9 +217,8 @@ else
 
         </div>
 
-        </div>
+   
 
-    </div>
 <br>
 <br>
 <br>
