@@ -20,6 +20,7 @@ if($conn->query($sql)){
 	<title></title>
 </head>
 <body>
-	<a href="Read.php">Logout</a>
+	
+	<a href="Read.php">Click to back to read</a>
 </body>
 </html>

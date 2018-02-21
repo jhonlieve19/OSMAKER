@@ -18,7 +18,7 @@ if($conn->query($sql)){
 		if($conn->query($sql)){
 			$_SESSION['type'] = "";
 			$_SESSION['price'] = 0;
-			echo "<h1>SUBSCRIPTION COMPLETE!</h1><br><a href='Read.php'>Back to Create story page</a>";
+			echo "<h1>SUBSCRIPTION COMPLETE!</h1><br><a href='Create.php'>Back to Create story page</a>";
 		}
 	}
 }

@@ -27,7 +27,7 @@ if($result1->num_rows > 0){
 $config['seqno'] = $seqNo;
 $config['url']="https://sandbox.paypal.com/cgi-bin/webscr";
 $config['business']=$email;
-$config['return'] = "http://localhost/story/payment_success.php?seqNo=$seqNo";
+$config['return'] = "http://storymakeronline.rf.gd/payment_success.php?seqNo=$seqNo";
 $config['price'] = $price;
 
 ?>

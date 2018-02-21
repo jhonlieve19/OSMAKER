@@ -18,10 +18,6 @@ if(isset($_GET['code'])){
 
     $seqNo = $_GET['code'];
 
-
-
-
-
     //echo $seqNo;
 }
 $result = $conn->query("SELECT * FROM uploads WHERE seqNo LIKE '$seqNo'");
