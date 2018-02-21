@@ -62,10 +62,13 @@ if(isset($_POST['search']))
                 <input type="hidden" name="src" value="1">
 
                 <input type="hidden" name="on0" value="Format">Format <br />
-                <select id="sel" name="os0">
+               
+                <!-- dri na part ang selection for check -->
+                 <select id="sel" name="os0">
                     <option value="REGULAR">REGULAR</option>
                     <option value="PREMIUM">PREMIUM</option>
-                </select> <br />
+                </select> 
+               <br />
 
                 <input type="image" name="submit"
                        src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
@@ -73,6 +76,12 @@ if(isset($_POST['search']))
                 <img alt="" width="1" height="1"
                      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
             </form>
+           <!--  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                
+                
+                <button>Check</button>
+
+            </form> -->
             <script>
                 $(document).ready(function(){
                     $("#sel").change(function(){
@@ -83,11 +92,6 @@ if(isset($_POST['search']))
                             $("input[name=a3]").val("5");
                             console.log($("input[name=a3]").val());
 
-                            <?php 
-
-                            $_SESSION['price'] = 5; 
-                            $_SESSION['type'] = 'REGULAR'; 
-                            ?>
                         }
                         else if($(this).val()=='PREMIUM'){
 
@@ -96,12 +100,6 @@ if(isset($_POST['search']))
                             $("input[name=a3]").val("10");
                             console.log($("input[name=a3]").val());
 
-                            <?php 
-
-                            $_SESSION['price'] = 10; 
-                            $_SESSION['type'] = 'PREMIUM'; 
-
-                            ?>
                         }
 
                         // window.location.href="learn.php?price="+$(this).val();
@@ -110,6 +108,22 @@ if(isset($_POST['search']))
             </script>
         </center>
     </body>
+    <?php  
+
+    include "Connection.php";
+
+    if(isset($_POST['submit'])){
+
+        $_SESSION['type'] = '';
+        $type = $_POST['os0'];
+
+        $_SESSION['type'] =$type;
+        echo $_SESSION['type'];
+    }
+
+    ?>
+
+
     <?php
     include"footer.php";
     ?>

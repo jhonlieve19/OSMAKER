@@ -20,10 +20,14 @@ if($_POST){
     $password2 = mysqli_real_escape_string($conn,$_REQUEST['tbpassword2']);
     $email = mysqli_real_escape_string($conn,$_REQUEST['tbemail']);
 
-
+    $countpass = count($password1);
     if($password1 != $password2){
         header("location:index.php?alert=Password not match");
 
+        die();
+    }
+    else if(strlen($password1) < 8){
+        header("location:index.php?leng=Password length error $countpass");
         die();
     }
     else{
@@ -61,7 +65,7 @@ $exist = false;
 $result = $conn->query("SELECT * FROM accounts WHERE Username LIKE '$user'");
 if($result->num_rows > 0){
     $exist = true;
-    header("location: index.php?message=Username already exist");
+    header("location: index.php?existea=Username already exist");
 
 }
 else{

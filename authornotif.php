@@ -43,6 +43,8 @@ session_start();
                 border: 1px solid black;
                 height: 500px;
                 margin: 100px 0 0 0;
+                background-color: white;
+                border-radius: 5px;
 
             }
             .liness
@@ -112,7 +114,7 @@ session_start();
 						<span>
 						Your book number: $row[seqno]
 						has paid by payerid: $row[payerid]
-						</span>";
+						</span><br>";
                     }
                 }
                 else{

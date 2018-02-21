@@ -251,7 +251,7 @@
     <div class="divbtn">
         <li><button type="button" class = "navbtn" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" data-content="<a href='Form2.php?q=Action'>Action</a><br><a href='Form2.php?q=Adventure'>Adventure</a><br><a href='Form2.php?q=Fantasy'>Fantasy</a><br><a href='Form2.php?q=Horror'>Horror</a><br><a href='Form2.php?q=Romance'>Romance</a>"><i class="entypo-check"></i><p class="nv" id="discover">Category</p></button></li>
 
-        <li><button type="button" class = "navbtn" data-toggle="popover" data-placement="bottom" data-trigger="focus"  data-html="true" data-content="<a href='index3.php'>About us</a><br><a href='Contest.php'>Contest</a> "><i class="entypo-check"></i><p class="nv"id = "community">Community</p></button></li>
+        <li><button type="button" class = "navbtn" data-toggle="popover" data-placement="bottom" data-trigger="focus"  data-html="true" data-content="<a href='index3.php'>About us</a><br><a href='contest.php'>Contest</a> "><i class="entypo-check"></i><p class="nv"id = "community">Community</p></button></li>
 
         <li><button type="button" class = "navbtn" data-toggle="popover" data-placement="bottom" data-trigger="focus"  data-html="true" data-content="<a href='Create.php'>Make Story</a>"><i class="entypo-check"></i><p class="nv" id = "create">Make Story</p></button></li>
     </div>

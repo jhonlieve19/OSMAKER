@@ -193,10 +193,6 @@ else
 								<p>By: '.$auth.'</p> 
 									<input class="hvr-fade" id="btnsubm" type="submit" value="View">
 							</form>
-                             <form class="bnt" action="admindeletestry.php" method="post">
-								<input type="text" name="id" value="'.$seq.'" hidden>
-								<input class="hvr-fade" id="btnsubm" type="submit" value="Delete">
-							</form>
 						</div>
 
 					   ';

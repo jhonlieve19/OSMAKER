@@ -67,7 +67,7 @@ include "Connection.php";
         }
         .left,.lrigh{
             display: inline-block;
-           
+
 
         }
         .left
@@ -85,9 +85,6 @@ include "Connection.php";
             height: auto;
             background-color: #E9F2F9;
             padding: 1em;
-        }
-        table,tr{
-
         }
         form{
             display: inline-block;
@@ -134,12 +131,12 @@ include "Connection.php";
             color: red;
             font-weight: 800
         }
-         #blue
+        #blue
         {
             color: dodgerblue;
             font-weight: 800
         }
-          #green
+        #green
         {
             color: green;
             font-weight: 800
@@ -149,7 +146,25 @@ include "Connection.php";
             color: blue;
             text-decoration: underline
         }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
     </style>
+
     <body>
 
         <div class="in">
@@ -173,11 +188,18 @@ include "Connection.php";
             <div class="notification-area">
                 <div class="notification-data">
                     <br><br><br>
+                     <table>
+                                <tr>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Paid</th>
+                                <th>Type</th>
+                                </tr>
                     <?php 
 
                     include "Connection.php";
 
-                    $sql = "SELECT count(*) as TotalRegular from admin_notification where subscriptiont_type = 'REGULAR'";
+                    $sql = "SELECT count(*) as TotalRegular from admin_notification where subscriptiont_type = ''";
 
                     $result=$conn->query($sql);
                     if($result->num_rows>0){
@@ -212,7 +234,18 @@ include "Connection.php";
                     if($result->num_rows>0){
                         while ($row=$result->fetch_assoc()) {
 
-                            echo "ID: <span>$row[id]</span> Email: <span id = 'email'>$row[user_email]</span> Has Paid to your website :<b id='green'>$$row[price]</b> Type: <span><b id='red'>$row[subscriptiont_type]</b></span><br>";
+                            //echo "ID: <span>$row[id]</span> Email: <span id = 'email'>$row[user_email]</span> Has Paid to your website://<b id='green'>$$row[price]</b> Type: <span><b id='red'>$row		[subscriptiont_type]</b></span><br>";
+
+                            echo"
+                           
+                                <tr>
+                                <td>$row[id]</td>
+                                <td>$row[user_email]</td>
+                                <td>$row[price]</td>
+                                <td>$row[subscriptiont_type]</td>
+                                </tr>
+                           
+                            ";
                         }
 
                     }
@@ -221,6 +254,7 @@ include "Connection.php";
                 </div>
             </div>
         </div>
+         </table>
         <div id="fot">
             <?php 
 

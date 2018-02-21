@@ -62,7 +62,7 @@ if(isset($_POST['search']))
             .con
             {
                 background-color: white;
-                height: 1100px;
+                height: 1300px;
                 width: 1200px;
                 position: relative;
                 top: 100px;
@@ -158,8 +158,10 @@ if(isset($_POST['search']))
             {
 
                 position: relative;
+                top: -50px;
                 left: -450px;
-                width: 1080px
+                width: 1080px;
+                
             }
             #submit
             {
@@ -222,7 +224,7 @@ if(isset($_POST['search']))
             #freebtn
             {
                 float: left;
-                
+
                 position: relative;
                 left: -400px;
                 width: 1000px;
@@ -231,11 +233,11 @@ if(isset($_POST['search']))
             .free,.paid
             {
                 float: left;
-                
+
                 width: 490px;
                 height: 130px;
                 text-align: center;
-               
+
             }
             .free p,.paid p
             {
@@ -246,14 +248,14 @@ if(isset($_POST['search']))
             #freesubmit,#paidsubmit
             {
                 color: white;
-                border-radius: 5px;
-               border: 1px solid white;
+                border-radius: 20px;
+                border: 1px solid white;
                 background-color: #257cdb;
                 width: 150px;
                 height: 30px
             }
             #freesubmit
-            
+
             {
                 position: relative;
                 top: 35px
@@ -268,7 +270,7 @@ if(isset($_POST['search']))
                 background-color: white;
                 border: 1px solid #257cdb;
                 color: #257cdb;
-             
+
             }
             #price
             {
@@ -286,6 +288,34 @@ if(isset($_POST['search']))
                 left: 10px;
                 font-size: 15px;
                 z-index: 1
+            }
+            #fileToLoad
+            {
+                width: 300px;
+                border:1px solid #A7A7A7;
+                border-radius: 2px;
+            }
+            #import
+            {
+                position: relative;
+                left: 320px;
+                top: -44px;
+                border: 1px solid #257cdb;
+                background-color: #257cdb;
+                border-radius: 15px;
+                color: white;
+                width: 80px;
+                
+            }
+            #import:hover
+            {
+                background-color: white;
+                color: #257cdb;
+                border: 1px solid #257cdb;
+            }
+            #inputTextToSave
+            {
+                resize: none
             }
 
         </style>
@@ -379,57 +409,56 @@ if(isset($_POST['search']))
                             <br><br>
                             <label>Your Story Here</label>
                             <textarea class="toradius" id="inputTextToSave" name="tbstory" rows="20" cols="90" placeholder="Input your story here..." required id="txtarea"></textarea>
-                            
+
                             <script type="text/javascript">
 
-                            function saveTextAsFile()
-                            {
-                                var textToSave = document.getElementById("inputTextToSave").value;
-                                var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-                                var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-                                var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
-
-                                var downloadLink = document.createElement("a");
-                                downloadLink.download = fileNameToSaveAs;
-                                downloadLink.innerHTML = "Download File";
-                                downloadLink.href = textToSaveAsURL;
-                                downloadLink.onclick = destroyClickedElement;
-                                downloadLink.style.display = "none";
-                                document.body.appendChild(downloadLink);
-
-                                downloadLink.click();
-                            }
-
-                            function destroyClickedElement(event)
-                            {
-                                document.body.removeChild(event.target);
-                            }
-
-                            function loadFileAsText()
-                            {
-                                var fileToLoad = document.getElementById("fileToLoad").files[0];
-
-                                var fileReader = new FileReader();
-                                fileReader.onload = function(fileLoadedEvent) 
+                                function saveTextAsFile()
                                 {
-                                    var textFromFileLoaded = fileLoadedEvent.target.result;
-                                    document.getElementById("inputTextToSave").value = textFromFileLoaded;
-                                };
-                                fileReader.readAsText(fileToLoad, "UTF-8");
-                            }
+                                    var textToSave = document.getElementById("inputTextToSave").value;
+                                    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+                                    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+                                    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
 
-                        </script>
-                        
-                        <input type="file" id="fileToLoad">
-                        <button onclick="loadFileAsText()">Load Selected File</button><br><br>
-                            
+                                    var downloadLink = document.createElement("a");
+                                    downloadLink.download = fileNameToSaveAs;
+                                    downloadLink.innerHTML = "Download File";
+                                    downloadLink.href = textToSaveAsURL;
+                                    downloadLink.onclick = destroyClickedElement;
+                                    downloadLink.style.display = "none";
+                                    document.body.appendChild(downloadLink);
+
+                                    downloadLink.click();
+                                }
+
+                                function destroyClickedElement(event)
+                                {
+                                    document.body.removeChild(event.target);
+                                }
+
+                                function loadFileAsText()
+                                {
+                                    var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+                                    var fileReader = new FileReader();
+                                    fileReader.onload = function(fileLoadedEvent) 
+                                    {
+                                        var textFromFileLoaded = fileLoadedEvent.target.result;
+                                        document.getElementById("inputTextToSave").value = textFromFileLoaded;
+                                    };
+                                    fileReader.readAsText(fileToLoad, "UTF-8");
+                                }
+
+                            </script>
+                            <h5>&nbsp;Import story from notepad</h5>
+                            <input type="file" id="fileToLoad">
+                            <br>
+                            <button onclick="loadFileAsText()" class="hvr-fade" id="import">Import</button><br><br>
+
                             <div class="checkbox" >  
                                 <br>
                                 <label>
                                     <input type="checkbox" name="tbmature" value="On">
                                     <p>If the story contains unpleasant or inappropriate words, check this box and be readable by 18 years old  and above.</p>
-                                    <input type="checkbox" name="tbmature" value="On">
-                                    <p>Terms and Conditions Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan felis at diam hendrerit, vitae vehicula mi blandit. Vestibulum ac feugiat dui. Nulla ex metus, fermentum quis tempus non, accumsan eu est. Aliquam aliquet feugiat nisl id vestibulum. Nam tincidunt in nisl a mollis.</p>
                                 </label>
                             </div>
                             <div id="freebtn">

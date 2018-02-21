@@ -206,7 +206,7 @@ else
 									<label>'.$title.'</label>
 
 								<p>By: '.$auth.'</p> 
-								<p>By: '.$story.'</p> 
+								<p>Body of the story: <br>'.$story.'</p> 
                                 <br>
 								
                                 <br>
@@ -217,6 +217,7 @@ else
 								<input type="text" name="id" value="    '.$seq.'" hidden>
 								<input id="btnpass" type="submit" value="Delete">
 							</form>
+                            
 						</div>
 
 					   ';
