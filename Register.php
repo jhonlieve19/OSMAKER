@@ -1,17 +1,18 @@
 <?php
+
 include "Connection.php";
 
-
-$fname = "";
-$lname = "";
-$bday = "";
-$user = "";
-$password1 =""; 
-$password2 = "";
-$email = "";
+if(isset($_POST['btn_save'])){
 
 
-if($_POST){
+    $fname = "";
+    $lname = "";
+    $bday = "";
+    $user = "";
+    $password1 =""; 
+    $password2 = "";
+    $email = "";
+
     $fname = mysqli_real_escape_string($conn,$_REQUEST['tbname']);
     $lname = mysqli_real_escape_string($conn,$_REQUEST['tblastname']);
     $bday = mysqli_real_escape_string($conn,$_REQUEST['tbbday']);
@@ -92,6 +93,7 @@ else{
     {
         echo " an error occured".$conn->error;
     }
+
 }
 
 ?>

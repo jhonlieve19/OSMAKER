@@ -55,4 +55,5 @@
 <a id="accs" class = "hvr-underline-from-left" href="AdminContest.php">Manage Contest</a><br>
 <a id="accs" class = "hvr-underline-from-left" href="adminManageAcc.php">Manage Account</a><br>
 <a id="accs" class = "hvr-underline-from-left" href="check_plagarize.php">Check Plagiarize</a><br>
+<a id="accs" class = "hvr-underline-from-left" href="grammar_checker.php">Grammar Checker</a><br>
 <a id="accs" class = "hvr-underline-from-left" href="logoutadmin.php">Logout</a><br>

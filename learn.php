@@ -3,6 +3,12 @@
 require_once "config.php";
 session_start();
 include "Connection.php";
+
+
+//default session for regular
+$_SESSION['type'] = 'REGULAR';
+$_SESSION['price'] = 5;
+
 if(isset($_SESSION['Username'])){
 
     $username = $_SESSION['Username'];
@@ -38,13 +44,6 @@ if(isset($_POST['search']))
                 On this content you are going to subscribe the Online Story Maker and have some transaction in order for you to earn.
             </p>
             <br><br><br>
-            <!--
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="UTSUE3FJLK5RN">
-<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>-->
 
             <form action="<?php echo $config['url']; ?>" method="post">
 
@@ -52,7 +51,7 @@ if(isset($_POST['search']))
                 <input type="hidden" name="return" value="<?php echo $config['return']; ?>">
                 <input type="hidden" name="cmd" value="_xclick-subscriptions">
 
-                <input type="hidden" name="item_name" value="OSM">
+                <input type="hidden" id="item_name" name="item_name" value="OSM">
                 <input type="hidden" name="item_number" value="OSM">
 
                 <input type="hidden" id="val" name="a3" value="5.00">
@@ -60,8 +59,6 @@ if(isset($_POST['search']))
                 <input type="hidden" name="t3" value="M">
 
                 <input type="hidden" name="src" value="1">
-
-                <input type="hidden" name="on0" value="Format">Format <br />
                
                 <!-- dri na part ang selection for check -->
                  <select id="sel" name="os0">
@@ -87,18 +84,38 @@ if(isset($_POST['search']))
                     $("#sel").change(function(){
                         if($(this).val()=='REGULAR'){
 
+
+                            $.ajax({
+                                url: "regular_session.php",
+                                type: "post",
+                                success: function(data){
+                                    console.log(data);
+                                }
+                            });
+
                             console.log($("#sel option[value='REGULAR']").prop("selected",true).val());
 
                             $("input[name=a3]").val("5");
                             console.log($("input[name=a3]").val());
+                            $("#item_name").val("Reglar OSM Website Subscription");
 
                         }
                         else if($(this).val()=='PREMIUM'){
+
+
+                            $.ajax({
+                                url: "premium_session.php",
+                                type: "post",
+                                success: function(data){
+                                    console.log(data);
+                                }
+                            });
 
                             console.log($("#sel option[value='PREMIUM']").prop("selected",true).val());
 
                             $("input[name=a3]").val("10");
                             console.log($("input[name=a3]").val());
+                            $("#item_name").val("Premium OSM Website Subscription");
 
                         }
 

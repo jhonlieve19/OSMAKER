@@ -328,6 +328,7 @@ li button a:hover
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="icon" href="Images/OSM_Icon.ico">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <script>
@@ -416,7 +417,7 @@ li button a:hover
             window.alert("ERROR: Password does not match -- Please try again ");
             </script>';
         }
-         if(isset($_GET['leng'])){
+        if(isset($_GET['leng'])){
             $prmt = $_GET['leng'];
             echo ' <script>
             window.alert("ERROR: Password must be atlest minimum of 8 characters-- Please try again ");
@@ -465,7 +466,8 @@ li button a:hover
                                     <input class="form-control" id="pas" type="password" name="tbpassword1" placeholder="Password" required><br>
                                     <input class="form-control" id="rpas" type="password" name="tbpassword2" placeholder="Retype Password" required><br>
 
-                                    <input id="btndsgn" class ="button" type="submit" value="Save">
+                                    <div class="g-recaptcha" data-sitekey="6LcOA0gUAAAAACEpO_Zd3FQbCV33G6CHd2u3KTR9"></div>
+                                    <input id="btndsgn" name="btn_save" class ="button" type="submit" value="Save">
                                 </form>
                             </div>
                         </div>
@@ -477,7 +479,7 @@ li button a:hover
                         <p class="tgline">Help us to share this site all over the world, Click Tweet and Share below.</p>
 
 
-                        <!------>
+                        <!-- -->
                         <br>
                         <h3 id="signh3" class="sm">Social Media</h3>
                         <br>
