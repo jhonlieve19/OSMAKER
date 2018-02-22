@@ -328,7 +328,6 @@ li button a:hover
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="icon" href="Images/OSM_Icon.ico">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <script>
@@ -465,8 +464,6 @@ li button a:hover
                                     <input class="form-control" id="tbr" type="text" name="tbusername" placeholder="Username" required><br>
                                     <input class="form-control" id="pas" type="password" name="tbpassword1" placeholder="Password" required><br>
                                     <input class="form-control" id="rpas" type="password" name="tbpassword2" placeholder="Retype Password" required><br>
-
-                                    <div class="g-recaptcha" data-sitekey="6LcOA0gUAAAAACEpO_Zd3FQbCV33G6CHd2u3KTR9"></div>
                                     <input id="btndsgn" name="btn_save" class ="button" type="submit" value="Save">
                                 </form>
                             </div>
