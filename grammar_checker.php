@@ -212,10 +212,7 @@ else{
 		<div class="lright">
 
 			<div class="how">
-				<textarea id="my_text" placeholder="Place your grammar here! .."></textarea>
-				<br>
-				<br>
-				<button class="btn btn-success" onclick="Scribens.Check('my_text')">Check Grammar</button>
+				<!-- PrepostSEO Grammar Checker Widget --><div id="ppsWidgetCode"></div><div style="text-align: center; font-size:12px; color:#333;"><p><a href="https://www.prepostseo.com/grammar-checker" target="_blank" style="color:#000;" id="ppsLink">Grammar Checker</a> provided by <a href="https://www.prepostseo.com/" target="_blank"  style="color:#000;">prepostseo.com</a></p></div><script type="text/javascript" src="//www.prepostseo.com/widget-grammar-checker.js?"></script>
 			</div>
 
 
