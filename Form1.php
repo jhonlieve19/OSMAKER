@@ -411,7 +411,7 @@ if(isset($_POST['search']))
                 {
                     //echo 'mature';
                     // $result = $conn->query("SELECT * FROM uploads WHERE status = 'display' ORDER BY seqNo Desc");
-                    $result = $conn->query("select * from Uploads WHERE status = 'display' ORDER BY seqNo Desc LIMIT $start, $limit");
+                    $result = $conn->query("select * from Uploads WHERE status = 'display' AND state='rAuthorAll' ORDER BY seqNo Desc LIMIT $start, $limit");
                     if($result->num_rows > 0)
                     {
                         while ($row = $result->fetch_assoc())

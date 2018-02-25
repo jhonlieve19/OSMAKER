@@ -167,7 +167,7 @@ else
                         }
 
 
-                        $result = $conn->query("SELECT * FROM uploads WHERE status = 'notdisplay' ORDER BY date ASC");
+                        $result = $conn->query("SELECT * FROM uploads WHERE state = 'rAuthorAdmin' ORDER BY date ASC");
 
                         if($result->num_rows > 0)
                         {

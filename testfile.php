@@ -25,11 +25,11 @@ if(isset($_FILES['image']))
 }
 if(in_array($file_ext,$extensions)===false)
 {
-	header("location: Create.php?msg=extension not allowed,please choose a JPEG or PNG file");
+	header("location: testfile2.php?msg=extension not allowed,please choose a JPEG or PNG file");
 }
 if($file_size > 3000)
 {
-	header("location: Create.php?mess=File size must be exately 3MB or less   ");
+	header("location: testfile2.php?mess=File size must be exately 3MB or less   ");
 }
 
 if(isset($_FILES['image']))
@@ -46,12 +46,12 @@ else
 {
 	$title = mysqli_real_escape_string($conn,$_REQUEST['tbtitle']);
 	$cat = mysqli_real_escape_string($conn,$_REQUEST['tbcategory']);
-	$mature = mysqli_real_escape_string($conn,$_REQUEST['tbmature1']);
+	$mature = mysqli_real_escape_string($conn,$_REQUEST['tbmature']);
 	$story = mysqli_real_escape_string($conn,$_REQUEST['tbstory']);
 	$author = mysqli_real_escape_string($conn,$_REQUEST['tbauthor']);
 	$accno = mysqli_real_escape_string($conn,$_REQUEST['tbauthorid']);
 	$price = mysqli_real_escape_string($conn,$_REQUEST['price']);
-	$maturity = $_POST['tbmature'];
+	//$maturity = $_POST['waybuot'];
 
 	if(isset($_POST["free"])){
 		$sql = "SELECT * FROM uploads where title like '$title'";
@@ -61,12 +61,13 @@ else
 			header("location: Create.php?message1=Title already exist in the database");
 		}
 		else{
-			if(empty($maturity)){
+			echo "<script>alert('Niagi ko dri nga script');</script>";
+			if(empty($mature)){
 				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),0,0,'rAuthorAdmin',0)"))
 				{
-					echo "<br><br><br>".$accno;
+					echo "/*<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
-					header("location: Form1.php?message=Successfully upload");
+					header("location: testfile2.php?message=Successfully upload");
 				}
 				else
 				{
@@ -79,7 +80,7 @@ else
 				{
 					echo "<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
-					header("location: Form1.php?message=Successfully Upload");
+					header("location: testfile2.php?message=Successfully Upload");
 				}
 				else
 				{
@@ -97,12 +98,12 @@ else
 			header("location: Create.php?message1=Title already exist in the database");
 		}
 		else{
-			if(empty($maturity)){
+			if(empty($mature)){
 				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),1,$price,'rAuthorAdmin',0)"))
 				{
 					echo "<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
-					header("location: Form1.php?message=Successfully upload");
+					header("location: testfile2.php?message=Successfully upload");
 				}
 				else
 				{
@@ -115,7 +116,7 @@ else
 				{
 					echo "<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
-					header("location: Form1.php?message=Successfully Upload");
+					header("location: testfile2.php?message=Successfully Upload");
 				}
 				else
 				{

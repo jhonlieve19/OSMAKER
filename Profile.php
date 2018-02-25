@@ -397,8 +397,7 @@ if(isset($_POST['search']))
                                         $usr = $_SESSION['Username'];
                                     }
 
-
-                                    $result = $conn->query("SELECT * FROM uploads WHERE status = 'display' AND author = '".$usr."' ORDER BY date DESC");
+                                    $result = $conn->query("SELECT DISTINCT * FROM uploads WHERE (state = 'rAuthorAll') OR (state = 'rAuthorAdmin') AND author = '".$usr."' ORDER BY date DESC");
 
                                     if($result->num_rows > 0)
                                     {
@@ -429,14 +428,7 @@ if(isset($_POST['search']))
 
                                         } 
                                         echo '<br><a href="Create.php" id="makestorylink">+</a>&nbsp; to add stories<br><br><br><br>';
-                                    }
-
-                                    else{
-
-                                        echo '<div id = "nocola">
-                                        <br><h6 id = "nostoriesyet"  >No collaborative stories available</h6><a href="Create.php" id="makestorylink" class="hvr-fade">+</a>&nbsp; to add stories<br><br><br><br>
-                                        </div>';
-                                    }					
+                                    }	
                                     ?>
                                 </div>
                                 <br>

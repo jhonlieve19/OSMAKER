@@ -231,7 +231,7 @@ if(isset($_POST['search']))
                 }
                 ?>
                 <?php 
-                $result = $conn->query("SELECT * FROM uploads WHERE place LIKE '$getQ' AND status = 'display' ORDER BY date ASC ");
+                $result = $conn->query("SELECT * FROM uploads WHERE place LIKE '$getQ' AND state = 'rAuthorAll' ORDER BY date ASC ");
                 if($result->num_rows > 0)
                 {
                     while ($row = $result->fetch_assoc())
@@ -269,48 +269,6 @@ if(isset($_POST['search']))
                 <br>
             </div>
 
-
-            <div class="con1">
-
-
-                <?php 
-                $result = $conn->query("SELECT * FROM cstories WHERE cCAT LIKE '$getQ' AND Status LIKE 'Write' AND state='display' ORDER BY date Desc");
-                if($result->num_rows > 0)
-                {
-                    while ($row = $result->fetch_assoc())
-                    {   
-                        $seq = $row['storySeq'];
-                        $filename = $row['iCover'];
-                        $title = $row['cTitle'];
-                        $auth = $row['cWritter'];
-                        $key = $row['storyKey'];
-
-                        echo '
-
-					  <div class = "hvr-grow-shadow" id = "ins" >
-							<form action="ReadCollaborative.php" method="post">
-								<input type="text" name="tbKey" value="'.$key.'" hidden>
-								<input type="text" name="tbseq" value="'.$seq.'" hidden>
-									<center>		
-										<img src="Uploads/'.$filename.'"id ="pic">
-									</center>
-									<h5>'.$title.'</h5>
-								    <h6>by: '.$auth.'</h6>  
-									<input id="btnpass" type="submit"  class= "hvr-fade"value="Read Story">
-							</form>
-						</div>
-
-					   ';
-                    } 
-                }
-                else
-                {
-                    //echo'&emsp;Nothing to show at this moment';
-                }					
-                ?>
-
-                <div class="linesss">
-                </div>
                 <br>
 
 

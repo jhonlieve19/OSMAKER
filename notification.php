@@ -192,14 +192,14 @@ include "Connection.php";
                                 <tr>
                                 <th>ID</th>
                                 <th>Email</th>
-                                <th>Paid</th>
+                                <th>Amount Paid</th>
                                 <th>Type</th>
                                 </tr>
                     <?php 
 
                     include "Connection.php";
 
-                    $sql = "SELECT count(*) as TotalRegular from admin_notification where subscriptiont_type = ''";
+                    $sql = "SELECT count(*) as TotalRegular from admin_notification where subscriptiont_type = 'REGULAR'";
 
                     $result=$conn->query($sql);
                     if($result->num_rows>0){

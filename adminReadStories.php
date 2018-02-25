@@ -2,7 +2,7 @@
 session_start();
 include "Connection.php";
 if(isset($_SESSION['adminuser'])){
-    
+
     $usr = $_SESSION['adminuser'];
 }
 else
@@ -110,13 +110,13 @@ else
 
         }
         form,.btnpass{
-          display: inline-block;
-            
+            display: inline-block;
+
         }
         .link{
             display: inline-block;
         }
-      #btnpass{
+        #btnpass{
             display: inline-block;
             border: 1px solid darkcyan;
             background-color: darkcyan;
@@ -124,10 +124,10 @@ else
             color: white;
             border-radius: 5px;
             width: 200px
-            
+
         }
         #btnpass:hover{
-           background-color: white;
+            background-color: white;
             border: 1px solid darkcyan;
             color:darkcyan
         }
@@ -164,13 +164,13 @@ else
             <div class="lright">
                 <div class="gen">
                     <div class="concon">
-                        
+
 
                         <?php 
                         if(isset($_SESSION['Username'])){
                             $usr = $_SESSION['Username'];
                         }
-                         if(isset($_GET['code'])){
+                        if(isset($_GET['code'])){
                             $seqNo = $_GET['code'];
                         }
 
@@ -195,7 +195,7 @@ else
                        <h5 class="link"><b><a href="adminViewStories.php">Pending Stories</a></b></h5> &emsp; | &emsp;
                             <h5 class="link"><b>Category: &nbsp; '.$cat.'</b></h5> &emsp;  | &emsp;
                             <h5 class="link"><b>Submit date: &nbsp;' .$date.'</b></h5> &emsp; 
-                            
+
                             <hr>
 							<form action="adminUpDisplay.php" method="post">
 								<input type="text" name="id" value="'.$seq.'" hidden>
@@ -206,9 +206,10 @@ else
 									<label>'.$title.'</label>
 
 								<p>By: '.$auth.'</p> 
-								<p>Body of the story: <br>'.$story.'</p> 
+                                <label>Body of the Story:</label><br><br>
+								<p>'.$story.'</p> 
                                 <br>
-								
+
                                 <br>
 									<input id="btnpass" type="submit" value="Accept">
 							</form>
@@ -217,8 +218,16 @@ else
 								<input type="text" name="id" value="    '.$seq.'" hidden>
 								<input id="btnpass" type="submit" value="Delete">
 							</form>
-                            
+
 						</div>
+                        
+                        <div class="how">
+				<script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script><div style="text-align: center; font-size:12px; color:#333;"><p>Plagiarism Checker provided by <a href="http://www.storymakeronline.rf.gd/" target="_blank"  style="color:#000;">Online Story Maker</a></p></div>
+			</div>
+            
+            <div class="how">
+                <!-- PrepostSEO Grammar Checker Widget --><div id="ppsWidgetCode"></div><div style="text-align: center; font-size:12px; color:#333;"><p><a href="https://www.prepostseo.com/grammar-checker" target="_blank" style="color:#000;" id="ppsLink">Grammar Checker</a> provided by <a href="https://www.storymakeronline.rf.gd/" target="_blank"  style="color:#000;">Online Story Maker</a></p></div><script type="text/javascript" src="//www.prepostseo.com/widget-grammar-checker.js?"></script>
+            </div>
 
 					   ';
                             } 
@@ -230,12 +239,7 @@ else
                         ?>
                     </div>
                 </div>
-
-
-
             </div>
-
-
         </div>
 
         </div>

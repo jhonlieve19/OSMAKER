@@ -324,10 +324,22 @@ if(isset($_POST['search']))
                 <p id ='type'>Username<p>
 				<input class='form-control' id='tbr' type='text' name='tbusrname' value='$usrname' required readonly>
                 <p id ='type'>Password<p>
-				<input class='form-control' id='tbr' type='password' name='tbpass1' value='$pass' required>
+				<input class='form-control' id='pass' type='password' name='tbpass1' value='$pass' required>
                 <p id ='type'>Re-type Password<p>
 				<input class='form-control' id='tbr' type='password' name='tbpass2' value='$pass' required>
+<input type="checkbox" onclick="myFunction()">Show Password>
 
+<script>
+function myFunction() {
+    var x = document.getElementById("pass");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
+                
 						";
                             }
                         }

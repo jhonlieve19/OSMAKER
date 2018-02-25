@@ -86,7 +86,7 @@ else{
         }
         $sql1 = "insert into subscription(author_sub,accno,date) values(0,'$id',current_date)";
         if($conn->query($sql1)){
-            header("location: index.php?message=Inserted!");   
+            header("location: index.php?message=Inserted!");
         }
     }
     else

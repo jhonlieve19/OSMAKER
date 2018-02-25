@@ -422,7 +422,7 @@ else{
                         $result = $conn->query($sql);
                         if($result->num_rows >0){
                             while ($row = $result->fetch_assoc()) {
-                                echo "<p class = 'read' id='type'>Read &nbsp;&nbsp;&nbsp;:<b id='type1'> $row[viewcount]&nbsp;</b></p>
+                                echo "<p class = 'read' id='type'>Viewed by &nbsp;&nbsp;&nbsp;:<b id='type1'> $row[viewcount]&nbsp;</b></p>
                                 <hr>";
                             }
                         } 
