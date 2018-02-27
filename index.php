@@ -374,7 +374,7 @@ li button a:hover
                         </center>
                         <br>
                         <div class="mcon">
-                            <form action="Form1.php" method="post">
+                            <form action="registerconfirm.php" method="post">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                     <input id="email" type="text" class="form-control" name="tbuser" placeholder="Username" size="5" required>
@@ -386,7 +386,7 @@ li button a:hover
                                 </div>
                                 <br>
                                 <center>
-                                    <input class="btnsub" type="submit" value="Sign in" >
+                                    <input class="btnsub" name="btn_login" type="submit" value="Sign in" >
                                 </center>
                                 <br>
                                 <center> 

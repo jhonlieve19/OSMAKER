@@ -55,6 +55,9 @@ else
 	$price = mysqli_real_escape_string($conn,$_REQUEST['price']);
 
 	if(isset($_POST["free"])){
+
+	$mat = $_POST['tb_mature'];
+
 		$sql = "SELECT * FROM uploads where title like '$title'";
 
 		$result=$conn->query($sql);
@@ -63,7 +66,9 @@ else
 		}
 		else{
 			if(empty($mature)){
-				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),0,0)"))
+				$sql = "INSERT INTO uploads(seqNo,uploaderid,filename,title,story,place,exclusive,author,status,up_date,isPaid,price) VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),0,0)";
+
+				if($conn->query($sql))
 				{
 					echo "<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
@@ -76,7 +81,9 @@ else
 			}
 			else
 			{
-				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now()),0,0"))
+				$sql = "INSERT INTO uploads(seqNo,uploaderid,filename,title,story,place,exclusive,author,status,up_date,isPaid,price) VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now(),0,0)";
+
+				if($conn->query($sql))
 				{
 					echo "<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
@@ -89,7 +96,7 @@ else
 			}
 		}
 	}
-	else if(isset($_POST['paid'])){
+	/*else if(isset($_POST['paid'])){
 		$sql = "SELECT * FROM uploads where title like '$title'";
 
 		$result=$conn->query($sql);
@@ -99,7 +106,7 @@ else
 		}
 		else{
 			if(empty($mature)){
-				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),1,$price)"))
+				if($conn->query("INSERT INTO(seqNo,uploaderid,filename,title,story,place,exclusive,author,status,up_date,isPaid,price) uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','Off','$author','notdisplay',now(),1,$price)"))
 				{
 					echo "<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
@@ -112,7 +119,7 @@ else
 			}
 			else
 			{
-				if($conn->query("INSERT INTO uploads VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now()),1,$price"))
+				if($conn->query("INSERT INTO uploads(seqNo,uploaderid,filename,title,story,place,exclusive,author,status,up_date,isPaid,price) VALUES(NULL,$accno,'$file_name','$title','$story','$cat','$mature','$author','notdisplay',now(),1,$price)")
 				{
 					echo "<br><br><br>".$accno;
 					move_uploaded_file($file_tmp,"Uploads/".$file_name);
@@ -124,6 +131,6 @@ else
 				}
 			}
 		}
-	}
+	}*/
 }	
 ?>

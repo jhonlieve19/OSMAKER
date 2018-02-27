@@ -468,9 +468,6 @@ if(isset($_POST['search']))
                                 </div>
 
                                 <?php 
-
-                                ?>
-                                <?php 
                                 include "Connection.php";
 
                                 $sql = "select * from subscription where accno = '$_SESSION[idno]' and author_sub=0";

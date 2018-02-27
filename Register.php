@@ -74,7 +74,19 @@ else{
     echo $fname.$lname.$bday.$user.$password.$email;
     $id = 0;
 
-    $sql = "INSERT INTO accounts VALUES (NULL,'$fname','$lname','$bday','$user','$password','$email','L2.jpg')";
+    $sql = "INSERT INTO accounts VALUES (NULL,'$fname','$lname','$bday','$user','$password','$email','L2.jpg',0)";
+
+    /*$sql1 = "SELECT * FROM accounts where Username = '$user'";
+
+    $result=$conn->query($sql1);
+    if($result->num_rows >0){
+        while ($row =$result->fetch_assoc()) {
+            $user = $row['Username'];
+        }
+    }*/
+
+
+
     if($conn->query($sql))
     {
         $sql = "select * from accounts where Username='$user'";
@@ -84,9 +96,18 @@ else{
                 $id = $row['AccNo'];
             }
         }
+
+        
+
         $sql1 = "insert into subscription(author_sub,accno,date) values(0,'$id',current_date)";
         if($conn->query($sql1)){
-            header("location: index.php?message=Inserted!");   
+            
+            $code = uniqid(rand());
+
+            $sql2 = "insert into account_code values(null,'$id','$code')";
+            if($conn->query($sql2)){
+                header("location: index.php?message=Inserted!"); 
+            }   
         }
     }
     else

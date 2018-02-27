@@ -187,7 +187,7 @@ else
                                 $auth = $row['author'];
                                 $filename = $row['filename'];
                                 $seq = $row['seqNo'];
-                                $date = $row['date'];
+                                $date = $row['up_date'];
 
                                 echo '
 
@@ -213,9 +213,9 @@ else
 									<input id="btnpass" type="submit" value="Accept">
 							</form>
                             <br>
-                            <form action="admindeletestry.php" method="post">
+                            <form action="deletestoryconfirm.php?code1='.$seq.'" method="post">
 								<input type="text" name="id" value="    '.$seq.'" hidden>
-								<input id="btnpass" type="submit" value="Delete">
+								<input id="btnpass" name="btn_delete" type="submit" value="Delete">
 							</form>
                             
 						</div>
